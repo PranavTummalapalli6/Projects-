@@ -1,0 +1,135 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Users ────────────────────────────────────────────────────────────────────
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  documents     Document[]
+  conversations Conversation[]
+  aiLogs        AIRequestLog[]
+}
+
+// ─── Documents ────────────────────────────────────────────────────────────────
+
+enum DocumentStatus {
+  UPLOADED
+  PROCESSING
+  INDEXED
+  FAILED
+}
+
+model Document {
+  id             String         @id @default(uuid())
+  userId         String
+  originalName   String
+  storedFilename String
+  mimeType       String
+  fileSize       Int
+  status         DocumentStatus @default(UPLOADED)
+  errorMessage   String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  user   User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chunks DocumentChunk[]
+}
+
+model DocumentChunk {
+  id         String                     @id @default(uuid())
+  documentId String
+  content    String
+  chunkIndex Int
+  pageNumber Int?
+  metadata   Json                       @default("{}")
+  // pgvector column — queried via raw SQL for cosine similarity search
+  embedding  Unsupported("vector(1536)")?
+  createdAt  DateTime                   @default(now())
+
+  document Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+// ─── Conversations & Messages ─────────────────────────────────────────────────
+
+model Conversation {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String   @default("New Conversation")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages       Message[]
+  toolExecutions ToolExecution[]
+  aiLogs         AIRequestLog[]
+}
+
+enum MessageRole {
+  user
+  assistant
+  system
+}
+
+model Message {
+  id             String      @id @default(uuid())
+  conversationId String
+  role           MessageRole
+  content        String
+  createdAt      DateTime    @default(now())
+
+  conversation   Conversation    @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  toolExecutions ToolExecution[]
+}
+
+// ─── Tool Executions ──────────────────────────────────────────────────────────
+
+enum ToolStatus {
+  SUCCESS
+  FAILED
+}
+
+model ToolExecution {
+  id             String     @id @default(uuid())
+  conversationId String
+  messageId      String?
+  toolName       String
+  input          Json
+  output         Json
+  status         ToolStatus
+  durationMs     Int
+  createdAt      DateTime   @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  message      Message?     @relation(fields: [messageId], references: [id])
+}
+
+// ─── AI Request Logs ──────────────────────────────────────────────────────────
+
+model AIRequestLog {
+  id              String   @id @default(uuid())
+  userId          String
+  conversationId  String?
+  prompt          String
+  retrievedChunks Json     @default("[]")
+  selectedTool    String?
+  response        String
+  model           String
+  latencyMs       Int
+  createdAt       DateTime @default(now())
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  conversation Conversation? @relation(fields: [conversationId], references: [id])
+}
