@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta name="Description" content="CS 211 Project 3">
+    <title>Project 3 for CS 211 / Fall 2022</title>
+    <style type="text/css">
+	  body { background-color: #eee; }
+      a { color: #284; }
+      code { color: #284; }
+	  div.code { padding: 1em; padding-top: 0; border: groove; border-radius: 8px; }
+      .heading { color: #060; font-variant: small-caps; text-align: center; }
+	  .summary { text-align: center; }
+	  .notice { color: #f00; }
+      .heading .l1 { font-size: 1.5em; }
+      .heading .l2 { font-size: 1em; }
+      .body { font-size: .8em; }
+      .section { font-weight: bold; font-variant: small-caps; }
+      .unspec { font-style: italic; }
+      .name { font-style: italic; }
+      .emph { font-weight: bold; }
+      table.a { width: 100%; border-collapse: collapse; border: thin solid; }
+      table.a td { border-right: thin solid; text-align: center; }
+      table.a tr:nth-child(even) { border-top: thin solid; }
+      table.a tr:nth-child(odd) { background-color: rgba(0,0,0,0.05); }
+      table i { color: #284; }
+      table.b { border-collapse: collapse; 
+          border-top: thin solid; border-bottom: thin solid; }
+      table.b th { border-bottom: thin solid; 
+          padding-right: 2em; padding-left: 2em; }
+      table.b td { text-align: center; }
+	  table.b tr.w { border-top: thin solid; }
+      table.b tr:nth-child(odd) { background-color: rgba(0,0,0,0.05); }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <span class="l1">CS 211, All sections</span><br>
+      <span class="l2">Project 3</span><br>
+      <span class="l2">Check Blackboard for due date</span><br>
+      <p>
+    </p></div>
+	<div class="body">
+ 	  <hr>
+	  <div class="summary">The objective of this project is to be able to build
+	  classes by inheriting from other classes, including redefining behaviors through the use of overriding.</div>
+	  <hr><p>
+	  <span class="section">Overview:</span>
+	  </p>
+	  <ol>
+		  <li>Define a base class named <code>Robot</code>, used to define the capabilities of various types of robots.</li>
+		  <li>Derive classes <code>Drone</code>, <code>Vacuum</code>, and <code>MovieRobot</code> each of which describe a specific type of robot, and which redefine certain <code>Robot</code> behaviors appropriately.</li>
+		  <li>Derive more specific <code>MovieRobot</code> classes called <code>HAL9000</code>, <code>ModelB9</code>, and <code>WALL_E</code> which each have different capabilities.</li>
+          <li>Download and use a tester module to ensure that your programs are correct.  The programs can also be tested using Dr Java's interactive window.</li>
+          <li>Prepare the assignment for submission and submit it</li>		  
+	  </ol>
+	  <span class="notice">This project is an individual effort; the Honor Code applies.</span> 
+	<p> 
+	  <span class="section">Robot Class</span> 
+    </p><p>
+      The term "robot" (at least in popular usage) can refer to a very broad category of things, and yet there is a common image that we often have in mind when discussing robots in general: machines that interact with the world. Usually, we categorize different types of robots based on their capabilities. Let's create a general class that identifies some common capabilities that different robots might have, with the possibility that new capabilities might be added in the future. The <code>Robot</code> class we are about to write will be a general class which we can use to describe any type of robot - we won't worry about the specifics yet, and instead we'll use subclasses to describe those.
+    </p><p>
+      Our <code>Robot</code> class will include the following:</p>
+    <ul>
+      <li>A constructor, with the parameters <code>int serialNumber, boolean flies, boolean autonomous, boolean teleoperated</code>. The <code>serialNumber</code> is a number which uniquely identifies the robot, while the remaining parameters all represent different capabilities a robot can have: if <code>flies</code> is true, the robot can move through the air, <code>autonomous</code> is true when the robot can act on its own without a human operator, and <code>teleoperated</code> indicates whether a human can operate the robot manually.</li>
+      <li>A void method called <code>setCapabilities</code> for setting the capabilities after object creation with the parameter list <code>boolean flies, boolean autonomous, boolean teleoperated</code>.</li>
+	  <li>A getter called <code>getSerialNumber</code> for the serialNumber.  We do not need a setter because we do not expect to change the serial number after it is set (it may even make sense to declare the method and the corresponding field <code>final</code>).</li>
+	  <li>Methods <code>canFly</code>, <code>isAutonomous</code>, and <code>isTeleoperated</code>, each of which take no parameters and return <code>boolean</code>.  These method indicate which capabilities the robot supports.  They may be redefined in subclasses, but for now, each of these methods should return whatever the capabilities were set to.</li>
+	  <li> A <code>getCapabilities</code> method that takes no parameters and which returns a String containing each of the capabilities of the robot separated by spaces. For example, if <code>canFly</code> returns <code>true</code>, <code>isAutonomous</code> returns <code>false</code>, and <code>isTeleoperated</code> returns <code>true</code>, then <code>getCapabilities</code> should return the string "canFly isTeleoperated" (order and case are important). If all three returned <code>true</code> the string should be "canFly isAutonomous isTeleoperated". If none of them return <code>true</code>, the empty string should be returned (""). NOTE: in order for this method to work correctly for subclasses, you should use the previously defined <code>canFly, isAutonomous,</code> and <code>isTeleoperated</code> methods rather than access any data members directly.</li>
+ 	  <li> A <code>toString</code> method which returns a String in the format <code>"ID: <i>&lt;serialNumber&gt;</i>, Capabilities: <i>&lt;list of capabilities&gt;</i>"</code> (replacing with actual serial number and list of capabilities).</li>
+    </ul>
+  <p>
+  	<span class="section">Drone Class</span>
+  </p>
+  <p>
+  	Our simplest type of robot will represent a drone. Even though many different types of drones exist, they all have the same basic functionality, at least for the purposes of this project. All drones can fly, are teleoperated and not autonomous. To implement this subclass, we need to define the following:
+  </p>
+  	<ul>
+  		<li>Extend the <code>Robot</code> class.</li>
+  		<li>An overloaded constructor with just a single parameter: <code>int serialNumber</code>.</li>
+  		<li>An overridden <code>canFly</code> method which always returns <code>true</code>.</li>
+  		<li>An overridden <code>isAutonomous</code> method which always returns <code>false</code>.</li>
+  		<li>An overridden <code>isTeleoperated</code> method which always returns <code>true</code>.</li>
+  	</ul>
+  </li>
+  	NOTE: this class <b>does not</b> define or override the <code>getCapabilities</code> method, but it is still inherited by this subclass, and it should still give the correct output when on instances of this subclass. If you've followed the note above, this will be the case.
+  <p>
+  <span class="section">Vacuum Class</span> 
+  </p>
+  <p>
+  	Our next type of robot is the humble vacuum, a consumer product which autonomously vacuums your house.  All vacuums have the same basic capabilities: they can't fly or be teleoperated, but they are autonomous, and they also have the ability to clean.  To implement this subclass, we need to define the following:
+  </p>
+  <ul>
+  	<li>Extend the <code>Robot</code> class.</li>
+  	<li>An overloaded constructor with just a single parameter: <code>int serialNumber</code>.</li>
+  	<li>A new method, <code>canClean</code> which takes no arguments and returns true.</li>
+  	<li>An overridden <code>getCapabilities</code> method which returns a string in the same format as the parent class <code>Robot</code>, but with the additional <code>canClean</code> capability at the end.</li>
+  	<li>Overridden versions of each of three boolean methods from the parent class, as was done for the <code>Drone</code> class.</li>
+  </ul>
+  <p>
+  	<span class="section">MovieRobot Class</span>
+  </p>
+  <p>
+  	In addition to robots that exist in the real world, there is a rich (if not technically accurate) history of robots in film. The capabilities of these robots vary widely from film to film, so unlike the previous two subclasses we won't "hard code" the capabilities, but we will introduce a new capability that most movie robots have: speech. Invariably, whenever a MovieRobot is capable of speech it will have a catchphrase, so we'll store that in our class as well. Lastly, since there are no examples of generic MovieRobots - only robots from specific movies - we'll make MovieRobot an <code>abstract</code> class.
+  </p>
+  <ul>
+  	<li>Extend the <code>Robot</code> class.</li>
+  	<li>An overloaded constructor with the parameters <code>int serialNumber, boolean flies, boolean autonomous, boolean teleoperated, String catchphrase</code>. Note: you can use the parent class' constructor to set the other capabilities first, and then set the robots catchphrase.</li>
+  	<li>An overloaded four argument constructor which by default sets the catchphrase to <code>null</code>. Note: if you followed the previous note, you can chain constructors to accomplish this in one line.</li>
+  	<li>Add a new <b>abstract</b> method, <code>canSpeak</code> which takes no arguments and returns a boolean. The subclasses of MovieRobot will need to make sure this method returns <code>true</code> when they have a non-null catchphrase.</li>
+  	<li>An overridden <code>getCapabilities</code> method which returns a string in the same format as the parent class <code>Robot</code>, but with the additional <code>canSpeak</code> capability at the end (if true).</li>
+  	<li>An overridden <code>toString</code> method which returns a string in the same format as the parent class <code>Robot</code>, and if the robot can speak appends a space followed by the catchphrase surrounded by quotation marks. (If the robot cannot speak, nothing should be appended)</li>
+  </ul>
+  <p>
+  	<span class="section">MovieRobot Subclasses</span>
+  </p>
+  <p>
+  	Once we've made a subclass, we can keep building off of it by making new classes which derive from the subclass. We'll create three subclasses of MovieRobots from iconic films (all three of these classes should be concrete):
+  	<ul>
+  		<li>A <code>HAL9000</code> subclass which extends <code>MovieRobot</code>, which flies and has the catchphrase "I can't let you do that Dave."</li>
+  		<li>A <code>ModelB9</code> subclass which extends <code>MovieRobot</code>, which has the catchphrase "Danger, Will Robinson!" and the additional capability <code>flail</code>.</li>
+  		<li>A <code>WALL_E</code> subclass which extends <code>MovieRobot</code>, which cannot speak, but can also clean.</li>
+  	</ul>
+  	For each of these subclasses, make sure you override and add methods where appropriate, as you did in the previous subclasses. The easiest way to make sure the catchphrase for each subclass is correct is by overriding (not overloading) the <code>MovieRobot</code> constructor.
+  </p>
+
+
+  <p>
+  <span class="section">Testing:</span>
+	  <p>
+	  Download the following (if you don't already have it):
+      </p><ul>
+        <li>junit-cs211.jar</li>	  
+        <li>P3Tester.java</li>
+	  </ul>
+      This is a unit tester that you can use to test to see if your classes are working correctly. Note that the autograder which is used to evaluate your submission for a grade will include additional tests, and your code will be manually inspected to ensure compliance with all of the class and assignment guidelines.
+      <p>
+      When you think your classes are ready (you can try them even without the tester), do the following from the command prompt to run the tests.<br>
+	  On Windows:
+	  </p><div class="code">
+        <code>
+          javac -cp .;junit-cs211.jar *.java<br>
+          java -cp .;junit-cs211.jar P3Tester<br>
+        </code>
+	  </div>
+      On Mac or Linux:<br>
+	  <div class="code">
+        <code>	  
+          javac -cp .:junit-cs211.jar *.java<br>
+          java -cp .:junit-cs211.jar P3Tester<br>
+        </code>
+	  </div>
+	  In Dr Java:
+	  <ul>
+	    <li>open the files, including <code>P3Tester.java</code>, and click the <i>Test</i> button.
+	  </li></ul>
+	  <p>
+In Eclipse:<ul>
+<li>create a new JUnitTest Case (File --> New --> JUnit TestCase)
+<li>Name it P3Tester
+<li>Copy/paste the content of P3Tester.java in the new file
+<li>Save the file
+<li>Right click on the P3Tester.java on the Package explorer
+<li>Chose Run As -->JUnit Test
+
+</ul>
+	  <p>
+
+	  <span class="section">Submission:</span>
+	  </p><p>
+	  Submission instructions are as follows.
+	  </p><ol>
+	    <li>Let <i>xxx</i> be your lab section number and let <i>yyyyyyyy</i> be
+		  your GMU userid.  Create the directory <code><i>xxx</i>_<i>yyyyyyyy</i>_P3/</code></li>
+		<li>Place all of the <code>.java</code> files that you've
+		  created into the directory.</li>
+		<li>Create the file <code>ID.txt</code> in the format shown below, containing your name, userid, G#, lecture section 
+		  and lab section, and add it to the directory.
+		  <p>
+		  <i>Full Name: Donald Knuth<br>
+		  userID: dknuth<br>
+		  G#: 00123456<br>
+		  Lecture section: 004<br>
+		  Lab section: 213<br>
+		  </i>
+		</p></li>
+		<li>Upload the ID.txt and the project's source files (*.java) to Gradescope<br/><a href="https://www.gradescope.com/courses/453172/assignments/2314079/">https://www.gradescope.com/courses/453172/assignments/2314079/</a></li>
+    <li>Download the files you just uploaded to Gradescope and recompile/rerun the code to verify that the upload was correct.</li>
+    <li>Make a backup of your files on OneDrive (use your mason account)</li>
+	  </ol>
+	  
+	</div>
+  
+</body></html>

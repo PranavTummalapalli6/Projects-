@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta name="Description" content="CS 211 Project 5">
+    <title>Project 5 for CS 211 / Fall 2022</title>
+    <style type="text/css">
+	  body { background-color: #eee; }
+      a { color: #284; }
+      code { color: #284; }
+	  div.code { padding: 1em; padding-top: 0; border: groove; border-radius: 8px; }
+      .heading { color: #060; font-variant: small-caps; text-align: center; }
+	  .summary { text-align: center; }
+	  .notice { color: #f00; }
+      .heading .l1 { font-size: 1.5em; }
+      .heading .l2 { font-size: 1em; }
+      .body { font-size: .8em; }
+      .section { font-weight: bold; font-variant: small-caps; }
+      .unspec { font-style: italic; }
+      .name { font-style: italic; }
+      .emph { font-weight: bold; }
+      table.a { width: 100%; border-collapse: collapse; border: thin solid; }
+      table.a td { border-right: thin solid; text-align: center; }
+      table.a tr:nth-child(even) { border-top: thin solid; }
+      table.a tr:nth-child(odd) { background-color: rgba(0,0,0,0.05); }
+      table i { color: #284; }
+      table.b { border-collapse: collapse; 
+          border-top: thin solid; border-bottom: thin solid; }
+      table.b th { border-bottom: thin solid; 
+          padding-right: 2em; padding-left: 2em; }
+      table.b td { text-align: center; }
+	  table.b tr.w { border-top: thin solid; }
+      table.b tr:nth-child(odd) { background-color: rgba(0,0,0,0.05); }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <span class="l1">CS 211, All sections</span><br>
+      <span class="l2">Project 5</span><br>
+      <span class="l2">Check Blackboard for due date</span><br>
+      <p>
+    </p></div>
+	<div class="body">
+ 	  <hr>
+	  <div class="summary">The objective of this project is to practice with recursion.</div>
+	  <hr><p>
+	  <span class="section">Overview:</span>
+	  </p>
+	  <ol>
+		  <li>Define a concrete class named <code>TicTacToe</code> for modeling a simple tic-tac-toe board. It will have utility methods for
+      checking if a game board is a win or a loss for either player (or a draw), determining what possible next moves are available for
+      either player, and for displaying the board for visual debugging.</li>
+		  <li>Define an abstract class named <code>Player</code> for modeling tic-tac-toe players. It should define one abstract method for
+      choosing a single move for a given game board (which will be overridden by its sub-classes), and one concrete method for computing the
+      value of a given board for this player (based on whether it is a winning or losing board).</li>
+		  <li>Define two concrete sub-classes named <code>UserPlayer</code> and <code>AIPlayer</code> which extend <code>Player</code> and
+      and provide different implementations of the appropriate methods. <code>AIPlayer</code> will use recursion to choose the optimal next
+      move.</li>
+      <li>This project has no tester, but provides two complete driver classes which can be used to run your code and check that important
+      components of your solution are implemented correctly. You are responsible for writing your own tests to verify that your code is
+      correct.</li>
+      <li>You are allowed to create additional methods or fields as long as they are <code>private</code>. You may import any classes you wish,
+        but you should not need to import anything other than <code>java.util.Scanner</code>.</li>
+      <li>Prepare the assignment for submission and submit it</li>		  
+	  </ol>
+	  <span class="notice">This project is an individual effort; the Honor Code applies.</span> 
+	<p> 
+	  <span class="section">TicTacToe</span> 
+    </p><p>
+      The game known as tic-tac-toe is a simple board game played with two players which alternate filling in spaces on an initially blank
+      3-by-3 board. One player uses the symbol "X" as their mark, and the other player uses the symbol "O". The first player that can make 
+      three of their marks in a row horizontally, vertically, or diagonally wins the game. If the entire board is filled without either player 
+      winning, the game is a draw. The <code>TicTacToe</code> class we are about to write will model the game board itself, and several useful
+      methods for interacting with the board.
+<!--       The term "robot" (at least in popular usage) can refer to a very broad category of things, and yet there is a common image that we often have in mind when discussing robots in general: machines that interact with the world. Usually, we categorize different types of robots based on their capabilities. Let's create a general class that identifies some common capabilities that different robots might have, with the possibility that new capabilities might be added in the future. The <code>Robot</code> class we are about to write will be a general class which we can use to describe any type of robot - we won't worry about the specifics yet, and instead we'll use subclasses to describe those. -->
+    </p><p>
+      Our <code>TicTacToe</code> class will include the following:</p>
+    <ul>
+      <li>A private field, <code>board</code>, which is a 2D <code>char</code> array with three rows and three columns.</li>
+      <li>Two private fields, <code>x</code> and <code>o</code>, which are references to <code>Player</code> subclasses.</li>
+      <li>Getters and setters for all fields.</li>
+      <li>A constructor which takes two <code>Player</code> arguments. The first argument should be the player for the "X" symbol, and the 
+        second the player for the "O" symbol. This constructor should also initialize the <code>board</code> to <code>'_'</code> (the 
+        underscore character) for each space.</li>
+      <li>A public method named <code>countBlanks</code> which takes no arguments and returns the number of spaces on the board which are blank (the underscore character) as an <code>int</code>.</li>
+      <li>A public method named <code>markerForPlayer</code> which takes a single <code>Player</code> argument and returns the character 
+        representing that player's symbol (either <code>'X'</code> or <code>'O'</code>, the case where the argument is not one of these players
+        will not be tested).</li>
+      <li>A public method named <code>checkWin</code> which takes a single <code>Player</code> argument and returns <code>true</code> if the
+        given player is the winner of this board (has three of their marks in a row horizontally, vertically, or diagonally), and 
+        <code>false</code> otherwise.</li>
+      <li>A public method named <code>checkLose</code> which takes a single <code>Player</code> argument and returns <code>true</code> if the
+        <emph>other</emph> player is the winner of this board and <code>false</code> otherwise. Note that neither player may be the winner of 
+        a given board, either because the game is not over, or because the game is a draw.</li>
+      <li>A public method named <code>checkDraw</code> which takes no arguments and returns <code>true</code> if the current board is a draw
+        (no blank spaces and no winner), and <code>false</code> otherwise.</li>
+      <li>An overridden <code>toString</code> method which represents the current board as a single <code>String</code> suitable for printing.
+        The <code>String</code> should contain each character of the board in row-column order with newlines between rows. For example the 
+        board <code>{{'O','_','X'},{'_','X','_'},{'_','_','_'}}</code> should be represented as the <code>String</code> 
+        <code>"O_X\n_X_\n___\n"</code> which, when printed, should display as
+        <code>
+        <table>
+          <tr><td>O</td><td>_</td><td>X</td></tr>
+          <tr><td>_</td><td>X</td><td>_</td></tr>
+          <tr><td>_</td><td>_</td><td>_</td></tr>
+        </table>
+        </code></li>
+      <li>A public method named <code>possibleMoves</code> which takes a single <code>Player</code> argument and returns a new array of 
+        <code>TicTacToe</code> boards representing the possible next moves for the given player. Note that the given player may place
+        their mark on any of the spaces on the board that are currently blank. <b><u>Important note 1</u></b>: the <b>order</b> that the
+        possible moves should be returned in is important, and should be in row-column order. <b><u>Important note 2</u></b>: this method 
+        <b><u>should not</u></b> modify the current board, the returned <code>TicTacToe</code> instances should make a deep copy of the current 
+        board's configuration, with one of the blank spaces filled in.</li>
+    </ul>
+  <p>
+  	<span class="section">Player Class</span>
+  </p>
+  <p>
+  	Since we will have two different kinds of players (human and AI), the <code>Player</code> class will be an <code>abstract</code> class which
+    both sub-classes will extend. This class only has two components:
+  </p>
+  	<ul>
+  		<li>A public method named <code>chooseMove</code> which takes a single <code>TicTacToe</code> argument and returns one of the 
+        <code>possibleMove</code>s. How this move is chosen will depend on the kind of player, so this must be an abstract method which 
+        subclasses must override.</li>
+  		<li>A public method named <code>boardValue</code> which takes a single <code>TicTacToe</code> argument and returns a <code>double</code> 
+        value representing how good the given board is for this player. The default implementation for this method should be to return 
+        <code>1.0</code> if this player has won this board, <code>-1.0</code> if this player has lost this board, and <code>0.0</code> 
+        otherwise (see <code>checkWin</code> and <code>checkLose</code> in the <code>TicTacToe</code> class). Since 
+        this default implementation is common to all subclasses, this should <b>not</b> be an abstract method.</li>
+  	</ul>
+  </li>
+  <p>
+  <span class="section">UserPlayer Class</span> 
+  </p>
+  <p>
+    The first kind of <code>Player</code> subclass we'll create will allow a user to interact with the game board at the terminal. This
+    should help us debug the various features of the other classes, and if the above classes are complete, allow us to play a game of
+    tic-tac-toe using the provided <code>PVPGame</code> class. The <code>UserPlayer</code> class has the following features:
+  </p>
+  <ul>
+  	<li>It should extend the <code>Player</code> class.</li>
+    <li>It should have one private <code>String</code> object with the name <code>name</code>.</li>
+  	<li>It should have one private <code>Scanner</code> object with the name <code>input</code>.</li>
+    <li>It should have one public constructor that takes one <code>Scanner</code> and one <code>String</code> as arguments as initial values for
+      these two fields.</li>
+    <li>It should override the <code>toString</code> method to return the <code>name</code> field.</li>
+    <li>It should override the <code>chooseMove</code> method to do the following:
+      <ol>
+        <li>Print out the current board that was passed in as an argument.</li>
+        <li>Use the <code>possibleMoves</code> method of the argument to get the options the user can choose from and print them out.</li>
+        <li>Ask the user to select one of these options and get the user's response using the <code>Scanner</code> object.</li>
+        <li>Return the <code>TicTacToe</code> board selected by the user.</li>
+      </ol>
+      The particular format of the strings printed to the user is not important, and will not be tested, but to aid your own debugging you
+      should use the <code>toString</code> methods of the <code>TicTacToe</code> class, provide clear separation between the current board 
+      and the possible options, and indicate which array index corresponds with each board option. Validation of user input will also not be
+      tested, so you can assume the user will always enter a valid option.
+    </li>
+  </ul>
+  <p>
+  	<span class="section">AIPlayer Class</span>
+  </p>
+  <p>
+  	With simple games, there are techniques for developing AI players which perform very well. For general games this can be a very challenging 
+    task to accomplish efficiently, but for very simple games like tic-tac-toe even a simple recursive solution is efficient enough. This class
+    will model this recursive solution. The <code>AIPlayer</code> class includes the following components:
+  </p>
+  <ul>
+  	<li>It should extend the <code>Player</code> class.</li>
+    <li>It should have one private <code>String</code> object with the name <code>name</code>.</li>
+    <li>It should have one private <code>Player</code> object with the name <code>opponent</code>.</li>
+    <li>It should have a getter and setter for the <code>opponent</code> field.</li>
+    <li>It should override the <code>toString</code> method to return the <code>name</code> field concatenated with the string 
+      <code>" (AI)"</code> (so if the <code>name</code> field was <code>"Player 1"</code> the return value should be 
+      <code>"Player 1 (AI)"</code>)</li>
+    <li>It should have one public constructor that takes one <code>String</code> and one <code>Player</code> as arguments as initial values for
+      these two fields.</li>
+    <li>It should have two <b>mutually recursive</b> methods, <code>minValue</code> and <code>maxValue</code>. If regular recursion is when a
+      method calls itself, then mutual recursion is when method A calls method B, and method B calls method A. In this case, the recursive 
+      calls in <code>minValue</code> will be to <code>maxValue</code>, and the recursive calls in <code>maxValue</code> will be to 
+      <code>minValue</code>. The details of how these methods work are as follows:
+      <ul>
+        <li>Both methods are public, take a <code>TicTacToe</code> instance as their single argument, and return a <code>double</code> 
+          value.</li>
+        <li>
+          The base cases for both methods are the same: if the argument represents a tic-tac-toe game where this <code>AIPlayer</code> has won 
+          the game the return value is <code>1.0</code>. If the argument is a game where this player has lost the game the return value is 
+          <code>-1.0</code>. If the argument is a draw game, the return value is <code>0.0</code>. If no one has won and the game is not a 
+          draw, the return value of the board must be computed recursively.
+        </li>
+        <li>The recursive cases are similar to each other, but slightly different. The <code>maxValue</code> method is used to determine what
+          value this player could get by choosing optimally among the options provided by <code>possibleMoves</code> for the current game board.
+          In order to compute this, the <b>AIPlayer</b> assumes that its <b>opponent</b> is going to try and choose the move option on the next 
+          board which <b>minimizes</b> its return. Therefore, <code>maxValue</code> should compute the <code>minValue</code> of each of the
+          possible moves for <b>this player</b>, and then return the value of the option with the <b>highest</b> value.
+        </li>
+        <li>Similarly, the recursive case for the <code>minValue</code> method looks at the <code>possibleMoves</code> for the <b>opponent</b>, 
+          computes the <code>maxValue</code> of each option, and returns the value of the option which is <b>lowest</b>.</li>
+      </ul>
+    </li>
+    <li>With the above two recursive methods completed, the <code>AIPlayer</code> can now override the <code>chooseMove</code> method. 
+      This method should get all of the <code>possibleMoves</code> for the given board, calculate each of the possible moves' 
+      <code>minValue</code>, and then return the move with the <b>highest</b> value.</li>
+    <li>Since the <code>AIPlayer</code> has a mechanism for computing the value of a game board that is more sophisticated than the default
+      provided in <code>Player</code>, we should override the <code>boardValue</code> method as well, so that it returns the 
+      <code>maxValue</code> of the given board. This might be helpful when debugging your recursive implementations. For example, consider the 
+      following board:
+
+        <code>
+        <table>
+          <tr><td>O</td><td>_</td><td>X</td></tr>
+          <tr><td>_</td><td>X</td><td>_</td></tr>
+          <tr><td>_</td><td>O</td><td>X</td></tr>
+        </table>
+        </code>
+        The current player in this situation is "O", but regardless of which option they choose, the "X" player can win on the next turn.
+        Therefore, even though though this board isn't complete yet, the <code>boardValue</code> for the "X" player should be 
+        <code>1.0</code> (and <code>-1.0</code> for the "O" player). It can be helpful when debugging your recursive solution to construct
+        several different boards that are one, two, or three moves away from a winning/losing or draw board, and then trace the recursion
+        step by step.
+  </ul>
+  <p>
+  	<span class="section">PVPGame and VSComputer classes</span>
+  </p>
+  <p>
+    Both of these classes are complete as provided. If all your other classes are implemented correctly, you should be able to compile and run
+    either class to play a game of tic-tac-toe. You may modify these classes as you wish, but you should make sure that in your final submission
+    your code compiles and runs correctly with the original contents. You do not need to include <code>PVPGame.java</code> or 
+    <code>VSComputer.java</code> in your submission (and your submission should compile cleanly if these files are missing).
+  </p>
+
+
+  <p>
+  <span class="section">Testing:</span>
+	  <p>
+	  There are two completly implemented classes which are provided to you for testing your code:
+      </p><ul>
+        <li>PVPGame.java</li>	  
+        <li>VSComputer.java</li>
+	  </ul>
+    Both classes create instances of the <code>TicTacToe</code> and <code>UserPlayer</code> classes, and use them to play a game of tic-tac-toe
+    with a user on the command line. The <code>PVPGame</code> class creates two <code>UserPlayer</code>'s, and can be used to quickly verify
+    that the basic game functionality works correctly. The <code>VSComputer</code> class creates one <code>UserPlayer</code> and one <code>
+    AIPlayer</code> so that you can test your tic-tac-toe skills against a difficult opponent. If you have implemented everything correctly, 
+    the <code>AIPlayer</code> should never lose, and should win if the <code>UserPlayer</code> makes mistakes! In order to compile these two 
+    classes, you must have created all of the appropriate <code>.java</code> files, and much of the API must be correct. Most logic errors 
+    should be clear when running these classes, however you should still write your own tests to verify the correctness of your code. You do not
+    need to use the junit framework (or jar file) to compile these two classes, but you should use unit testing for your own tests.
+	  <p>
+
+	  <span class="section">Submission:</span>
+	  </p><p>
+	  Submission instructions are as follows.
+	  </p><ol>
+	    <li>Let <i>xxx</i> be your lab section number and let <i>yyyyyyyy</i> be
+		  your GMU userid.  Create the directory <code><i>xxx</i>_<i>yyyyyyyy</i>_P5/</code></li>
+		<li>Place all of the <code>.java</code> files that you've created or modified into the directory, including any unit testing. You will not 
+    be graded on your testing code, no main methods for any of the classes in this project will be called as part of testing.</li>
+		<li>Create the file <code>ID.txt</code> in the format shown below, containing your name, userid, G#, lecture section 
+		  and lab section, and add it to the directory.
+		  <p>
+		  <i>Full Name: Donald Knuth<br>
+		  userID: dknuth<br>
+		  G#: 00123456<br>
+		  Lecture section: 004<br>
+		  Lab section: 213<br>
+		  </i>
+		</p></li>
+		<li>Upload the ID.txt and the project's source files (*.java) to Gradescope<br/><a href="https://www.gradescope.com/courses/453172/assignments/2422329/">https://www.gradescope.com/courses/453172/assignments/2422329/</a></li>
+    <li>Download the files you just uploaded to Gradescope and recompile/rerun the code to verify that the upload was correct.</li>
+    <li>Make a backup of your files on OneDrive (use your mason account)</li>
+	  </ol>
+	  
+	</div>
+  
+</body></html>

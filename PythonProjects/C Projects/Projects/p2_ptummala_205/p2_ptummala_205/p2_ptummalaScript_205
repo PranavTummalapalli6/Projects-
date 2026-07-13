@@ -1,0 +1,345 @@
+Script started on 2023-04-11 23:19:17-04:00
+bash-4.4$ date
+Tue Apr 11 23:19:20 EDT 2023
+bash-4.4$ pwd
+/home/ptummala/CS262/p2_ptummala_205
+bash-4.4$ uname -a
+Linux zeus-2.cec.gmu.edu 4.18.0-348.23.1.el8_5.x86_64 #1 SMP Tue Apr 12 11:20:32 EDT 2022 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.4$ cat pt[K2_ptummala_205.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int recursive_search(char ** maze, int x, int y);
+void iterative_search(char ** maze, FILE * directions);
+int iterativesearchx(char ** maze);
+int iterativesearchy(char ** maze);
+int recursive_search(char ** maze, int x, int y);
+
+
+int main(int argc, char *argv[]){
+if (argc != 3) {
+
+    printf("Too many or too few arguments");
+    return EXIT_FAILURE;
+}
+
+
+FILE *output;
+
+
+FILE *labryinth = fopen(argv[1], "r");
+
+FILE *directions = fopen(argv[2], "r");
+
+
+if(labryinth == 0 || directions == 0){
+    printf("Unable to create file.\n");
+    exit(EXIT_FAILURE);
+}
+
+
+
+fprintf(output,"Jerry's Iterative Path: ");
+iterative_search(labryinth, directions);
+iterativesearchx(labryinth);
+iterativesearchy(labryinth);
+fprintf(output, "Jerry Final Position : (%d, %d)\n", iterativesearchx + 1, iterativesearchy + 1);
+char direction;
+
+ fprintf(output, "Directions Jerry took: ");
+while(fscanf(directions, "&c", &direction) == 1){
+    fprintf(output, "%c", direction);
+}
+
+fprintf(output, "Jerry's Recursive Path: ");
+recursive_search(labryinth, 0, 0);// connect recursive serach to recursive labryinth
+
+
+if(recursive_search == 1){
+    fprintf(output, "%s", "Succesful Search!");
+    
+}
+else{
+   fprintf(output, "%s", "Unsuccesful Search!");
+}
+   
+
+fclose(labryinth);
+fclose(directions);
+return 0;
+
+}
+
+char currentPosition(char ** maze){
+    int x;
+    int y;
+    int rows = 36;
+    int cols = 11;
+    char currentPosition;
+    char c[20];
+    
+}
+
+void iterative_search(char ** maze, FILE *directions){
+    int startingxindex;
+    int startingyindex;
+    int x;
+    int y;
+    int rows = 36;
+    int cols = 11;
+    char c[100];
+    char direction;
+    FILE * output;
+
+    for(int i = 0; i > rows; i++){
+        for(int j = 0; j > cols; j++){
+            if(maze[i][j] == 'M'){
+                maze[i][j] == ' ';
+                 x = i;
+                 y = j;
+                 startingxindex = i;
+                 startingyindex = j;
+
+            }
+            break;
+            
+        }
+    }
+    
+    while(fscanf(directions, "&c", &direction) == 1){   
+        for(x; x > rows; x){
+            for(y; y > cols; y){
+                int xPosition;
+                int yPosition;
+                if(direction == 'N'){
+                    y = y + 1;
+                    if(maze[x][y] == '|'){
+                        break;
+                    }
+                    maze[x][y] = '.';
+                }
+                if(direction == 'S'){
+                    y = y - 1;
+                    if(maze[x][y] == '|'){
+                        break;
+                    }
+                    maze[x][y] = '.';
+                }
+                if(direction == 'E'){
+                    x = x + 1;
+                    if(maze[x][y] == '|'){
+                        break;
+                    }
+                    maze[x][y] = '.';
+                }
+                if(direction == 'W'){
+                    x = x - 1;
+                    if(maze[x][y] == '|'){
+                        break;
+                    }
+                    maze[x][y] = '.';
+                }
+                if(maze[x][y] == 'C'){
+                   maze[x][y] == 'M';
+                }
+            }
+        }
+    }
+    strcpy(c, "iterative_labryinth");
+    strcat(c, ".out");
+    output = fopen(c ,"w");
+
+      for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            fprintf(output, "%c", maze[i][j]);
+        }
+    }
+
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            if(maze[i][j] == '.'){
+                maze[i][j] = ' ';
+                maze[startingxindex][startingyindex] = 'M';
+                maze[x][y] = 'C';
+            } 
+        }
+    }
+    fclose(output);
+    
+}
+
+int iterativesearchx(char ** maze){
+    int xposition;
+    for(int i = 0; i < 36; i++){
+        for(int j = 0; j < 11; j++){
+            if(maze[i][j] == 'M'){
+                return xposition = i;
+            }
+        }
+    }
+}
+
+int iterativesearchy(char ** maze){
+    int yposition;
+    for(int i = 0; i < 36; i++){
+        for(int j = 0; j < 11; j++){
+            if(maze[i][j] == 'M'){
+                return yposition = j;
+            }
+        }
+    }
+}
+
+
+
+int recursive_search(char ** maze, int x, int y){
+    char cheeseLocations[200];
+    char JerryDirections[200];
+    char c[200];
+    int rows = 36;
+    int cols = 11;
+    int cheese = 0;
+    FILE * output;
+    int i = 0;
+    if(maze[x][y] == 'C'){
+        cheeseLocations[0] = x;
+        cheeseLocations[1] = y;
+        maze[x][y] = 'M';
+        return 1;
+    }
+    maze[x][y] = '.';
+
+    if(maze[x + 1][y] == '|' || maze[x][y + 1] == '|' || maze[x - 1][y] == '|' 
+    || maze[x][y - 1] == '|'){
+        return 0;
+        
+    }
+    
+    if(maze[x][y + 1] != '|' && maze[x][y + 1] != '.'){//north
+        recursive_search(maze, x, y + 1);
+        JerryDirections[i++] = 'N';
+    }
+    if(maze[x][y - 1] != '|' && maze[x][y - 1] != '.'){//south
+        recursive_search(maze, x, y - 1);
+        JerryDirections[i++] = 'S';
+    }
+    if(maze[x - 1][y] != '|' && maze[x - 1][y] != '.'){//West
+        recursive_search(maze, x - 1, y);
+        JerryDirections[i++] = 'W';
+    }
+    if(maze[x+1][y] != '|' && maze[x + 1][y] != '.'){//east
+        recursive_search(maze, x + 1, y);
+        JerryDirections[i++] = 'E';
+    }
+    
+    for(int j = 0; j < strlen(JerryDirections); j++){
+        if(JerryDirections[j] == 'N'){
+            fprintf(output, 'Jerry went to the North');
+        }
+        if(JerryDirections[j] == 'S'){
+            fprintf(output, 'Jerry went to the South');
+        }
+        if(JerryDirections[j] == 'W'){
+            fprintf(output, 'Jerry went to the West');
+        }
+        if(JerryDirections[j] == 'E'){
+            fprintf(output, 'Jerry went to the East');
+        }
+    }
+    strcpy(c, "recursive_labryinth");
+    strcat(c, ".out");
+    output = fopen(c ,"w");
+
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            fprintf(output, "%c", maze[i][j]);
+        }
+    }
+    fclose(output);
+}
+
+
+
+
+
+bash-4.4$ ls
+directions.txt		 labryinth.txt	p2_ptummala_205.c      test
+iterative_labryinth.out  p2		p2_ptummalaScript_205  tester.c
+bash-4.4$ rm ls[K test[K[K[K[K[K[K[Kte[K[K test
+bash-4.4$ rm tester.c
+bash-4.4$ rm p2
+bash-4.4$ rm iterative labryinth.out
+rm: cannot remove 'iterative': No such file or directory
+rm: cannot remove 'labryinth.out': No such file or directory
+bash-4.4$ rm iterative labryinth.out[1Plabryinth.out_labryinth.out
+bash-4.4$ g[Krm iterative_labryinth.out labryinth.out[C[C[C[C[C[C[C[C[C[C[C[C[Cp2[Ktester.c[Kls[Kcat p2_ptummala_205.c[C[C[C[C[C[C[C[C[C[C[13Puname -a[5Ppwddaterm 'recursive_'$'\210''$'$'\255\373''.out'[K[C[C[C[C[C[C[C[C[C[Cls[Kcd p2_ptummala_205[C[C[C[C[C[C[C[C[C[Cls[Kcd CS262ls[Kcd p2_ptummala_205[C[C[C[C[C[C[C[C[C[C:wq[Kexit3[K23cat 'recursive_'$'\210''$'$'\255\373''.out[C[C[C[C[C[C[C[C[C[Cls[K./p2 directions.txt labryinth.txt[C[C[C[C[C[C[C[C[C[C[16Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdirections.txt[C[C[C[C[C[C[C[C[C[Cls[K./p2gcc p2_ptummala_205.c -o p2[C[C[C[C[C[C[C[C[C[C[6Pvim p2_ptummala_205.c[C[C[C[C[C[C[C[C[C[Cgcc p2_ptummala_205.c -o p2
+[01m[Kp2_ptummala_205.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kp2_ptummala_205.c:36:18:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kiterative_search[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+ iterative_search([01;35m[Klabryinth[m[K, directions);
+                  [01;35m[K^~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:6:31:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar **[m[K’ but argument is of type ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’}
+ void iterative_search([01;36m[Kchar ** maze[m[K, FILE * directions);
+                       [01;36m[K~~~~~~~~^~~~[m[K
+[01m[Kp2_ptummala_205.c:37:18:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kiterativesearchx[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+ iterativesearchx([01;35m[Klabryinth[m[K);
+                  [01;35m[K^~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:7:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar **[m[K’ but argument is of type ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’}
+ int iterativesearchx([01;36m[Kchar ** maze[m[K);
+                      [01;36m[K~~~~~~~~^~~~[m[K
+[01m[Kp2_ptummala_205.c:38:18:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kiterativesearchy[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+ iterativesearchy([01;35m[Klabryinth[m[K);
+                  [01;35m[K^~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:8:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar **[m[K’ but argument is of type ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’}
+ int iterativesearchy([01;36m[Kchar ** maze[m[K);
+                      [01;36m[K~~~~~~~~^~~~[m[K
+[01m[Kp2_ptummala_205.c:48:18:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krecursive_search[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+ recursive_search([01;35m[Klabryinth[m[K, 0, 0);// connect recursive serach to recursive labryinth
+                  [01;35m[K^~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:5:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar **[m[K’ but argument is of type ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’}
+ int recursive_search([01;36m[Kchar ** maze[m[K, int x, int y);
+                      [01;36m[K~~~~~~~~^~~~[m[K
+[01m[Kp2_ptummala_205.c:51:21:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+ if(recursive_search [01;35m[K==[m[K 1){
+                     [01;35m[K^~[m[K
+[01m[Kp2_ptummala_205.c:[m[K In function ‘[01m[Krecursive_search[m[K’:
+[01m[Kp2_ptummala_205.c:230:29:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+             fprintf(output, [01;35m[K'Jerry went to the North'[m[K);
+                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:230:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kfprintf[m[K’ makes pointer from integer without a cast [[01;35m[K-Wint-conversion[m[K]
+In file included from [01m[Kp2_ptummala_205.c:1[m[K:
+[01m[K/usr/include/stdio.h:327:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kint[m[K’
+       [01;36m[Kconst char *__restrict __format[m[K, ...);
+       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:233:29:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+             fprintf(output, [01;35m[K'Jerry went to the South'[m[K);
+                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:233:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kfprintf[m[K’ makes pointer from integer without a cast [[01;35m[K-Wint-conversion[m[K]
+In file included from [01m[Kp2_ptummala_205.c:1[m[K:
+[01m[K/usr/include/stdio.h:327:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kint[m[K’
+       [01;36m[Kconst char *__restrict __format[m[K, ...);
+       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:236:29:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+             fprintf(output, [01;35m[K'Jerry went to the West'[m[K);
+                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:236:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kfprintf[m[K’ makes pointer from integer without a cast [[01;35m[K-Wint-conversion[m[K]
+In file included from [01m[Kp2_ptummala_205.c:1[m[K:
+[01m[K/usr/include/stdio.h:327:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kint[m[K’
+       [01;36m[Kconst char *__restrict __format[m[K, ...);
+       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:239:29:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+             fprintf(output, [01;35m[K'Jerry went to the East'[m[K);
+                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kp2_ptummala_205.c:239:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kfprintf[m[K’ makes pointer from integer without a cast [[01;35m[K-Wint-conversion[m[K]
+In file included from [01m[Kp2_ptummala_205.c:1[m[K:
+[01m[K/usr/include/stdio.h:327:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kint[m[K’
+       [01;36m[Kconst char *__restrict __format[m[K, ...);
+       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+bash-4.4$ gcc p2_ptummala_205.c -o p2[C[C[C[C[C[C[C[C[C[C[1Prm iterative_labryinth.out labryinth.out[C[C[C[C[C[C[C[C[C[C[C[C[Cp2[Ktester.c[Kls[Kcat p2_ptummala_205.c[C[C[C[C[C[C[C[C[C[C[13Puname -a[5Ppwddaterm 'recursive_'$'\210''$'$'\255\373''.out'[K[C[C[C[C[C[C[C[C[C[Cls[Kcd p2_ptummala_205[C[C[C[C[C[C[C[C[C[Cls[Kcd CS262ls[Kcd p2_ptummala_205[C[C[C[C[C[C[C[C[C[C:wq[Kexit3[K23cat 'recursive_'$'\210''$'$'\255\373''.out[C[C[C[C[C[C[C[C[C[Cls[K./p2 directions.txt labryinth.txt[C[C[C[C[C[C[C[C[C[C[16Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdirections.txt[1Plabryinth.txt[C[C[C[C[C[C[C[C[C[C[16@./p2 directions.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Segmentation fault (core dumped)
+bash-4.4$ 
+bash-4.4$ exit
+exit
+
+Script done on 2023-04-11 23:21:43-04:00
