@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(){
+double Tapr, apr;
+int numMoney;
+char c[30];
+
+printf("What is the total amount of purchases on the credit card"); //The APR, and the number of days the money is borrowed
+fgets(c,30,stdin);
+Sscanf(c, "%lf", &Tapc);
+
+printf("The APR");
+fgets(c,30,stdin);
+Sscanf(c, "%lf", &apr);
+
+printf("The number of days the money is borrowed");
+fgets(c,30,stdin);
+Sscanf(c, "%d", &numMoney);
+
+if(numMoney < 0 || Tapc < 0 || apr < 0){
+    exit(1);
+}
+
+int compoundInterest = Tapc * Math.pow((1 + ((apr/100) / 12)),12 * float(numMoney/365));
+int totalCompoundInterest = compoundInterest - Tapc;
+
+printf("\nThe original amount of purchases on the card : %.2lf\n",Tapc);
+printf("Annual Percentage Rate (APR) : %.2lf\n",apr);
+printf("Number of days the money is borrowed: %d\n",numMoney);
+printf("Amount of compound interest : %.2lf\n",compoundInterest);
+printf("Total amount to paid back : %.2lf\n",totalCompoundInterest);
+return -1;
+
+}
