@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE7FB8F52D9BD3CD00217275 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE7FB8F42D9BD3CD00217275 /* FirebaseAuth */; };
+		DE7FB8FA2D9BD88000217275 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FB8F92D9BD88000217275 /* SignInEmailView.swift */; };
+		DE7FB8FC2D9BDCD300217275 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FB8FB2D9BDCD300217275 /* AuthenticationManager.swift */; };
+		DE7FB8FE2D9BEC4C00217275 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FB8FD2D9BEC4C00217275 /* AuthViewModel.swift */; };
+		DE7FB9052D9D2B9E00217275 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FB9042D9D2B9E00217275 /* AuthenticationView.swift */; };
+		DEA059F22CE1EED2000E5390 /* PokerChipAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA059F12CE1EED2000E5390 /* PokerChipAppApp.swift */; };
+		DEA059F42CE1EED2000E5390 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA059F32CE1EED2000E5390 /* ContentView.swift */; };
+		DEA059F62CE1EED4000E5390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA059F52CE1EED4000E5390 /* Assets.xcassets */; };
+		DEA059FA2CE1EED4000E5390 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA059F92CE1EED4000E5390 /* Preview Assets.xcassets */; };
+		DEA05A042CE1EED5000E5390 /* PokerChipAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA05A032CE1EED5000E5390 /* PokerChipAppTests.swift */; };
+		DEA05A0E2CE1EED5000E5390 /* PokerChipAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA05A0D2CE1EED5000E5390 /* PokerChipAppUITests.swift */; };
+		DEA05A102CE1EED5000E5390 /* PokerChipAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA05A0F2CE1EED5000E5390 /* PokerChipAppUITestsLaunchTests.swift */; };
+		DEA5D0292D9BBCE400B7BC28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA5D0282D9BBCE400B7BC28 /* GoogleService-Info.plist */; };
+		DEA5D02C2D9BBEBD00B7BC28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DEA5D02B2D9BBEBD00B7BC28 /* FirebaseAnalytics */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEA05A002CE1EED5000E5390 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA059E62CE1EED2000E5390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEA059ED2CE1EED2000E5390;
+			remoteInfo = PokerChipApp;
+		};
+		DEA05A0A2CE1EED5000E5390 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA059E62CE1EED2000E5390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEA059ED2CE1EED2000E5390;
+			remoteInfo = PokerChipApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE7FB8F92D9BD88000217275 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		DE7FB8FB2D9BDCD300217275 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		DE7FB8FD2D9BEC4C00217275 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DE7FB9042D9D2B9E00217275 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		DEA059EE2CE1EED2000E5390 /* PokerChipApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerChipApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA059F12CE1EED2000E5390 /* PokerChipAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerChipAppApp.swift; sourceTree = "<group>"; };
+		DEA059F32CE1EED2000E5390 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DEA059F52CE1EED4000E5390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEA059F72CE1EED4000E5390 /* PokerChipApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokerChipApp.entitlements; sourceTree = "<group>"; };
+		DEA059F92CE1EED4000E5390 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DEA059FF2CE1EED5000E5390 /* PokerChipAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerChipAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA05A032CE1EED5000E5390 /* PokerChipAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerChipAppTests.swift; sourceTree = "<group>"; };
+		DEA05A092CE1EED5000E5390 /* PokerChipAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerChipAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA05A0D2CE1EED5000E5390 /* PokerChipAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerChipAppUITests.swift; sourceTree = "<group>"; };
+		DEA05A0F2CE1EED5000E5390 /* PokerChipAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerChipAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEA5D0282D9BBCE400B7BC28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEAFEF362D71270C00B61E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DE7FB8FF2D9D2B5200217275 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEA059EB2CE1EED2000E5390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA5D02C2D9BBEBD00B7BC28 /* FirebaseAnalytics in Frameworks */,
+				DE7FB8F52D9BD3CD00217275 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA059FC2CE1EED5000E5390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA05A062CE1EED5000E5390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE7FB8F32D9BD3CD00217275 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE7FB8F62D9BD67200217275 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DE7FB8F92D9BD88000217275 /* SignInEmailView.swift */,
+				DE7FB8FB2D9BDCD300217275 /* AuthenticationManager.swift */,
+				DE7FB8FD2D9BEC4C00217275 /* AuthViewModel.swift */,
+				DE7FB9042D9D2B9E00217275 /* AuthenticationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DEA059E52CE1EED2000E5390 = {
+			isa = PBXGroup;
+			children = (
+				DEA059F02CE1EED2000E5390 /* PokerChipApp */,
+				DEA05A022CE1EED5000E5390 /* PokerChipAppTests */,
+				DEA05A0C2CE1EED5000E5390 /* PokerChipAppUITests */,
+				DE7FB8F32D9BD3CD00217275 /* Frameworks */,
+				DEA059EF2CE1EED2000E5390 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEA059EF2CE1EED2000E5390 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEA059EE2CE1EED2000E5390 /* PokerChipApp.app */,
+				DEA059FF2CE1EED5000E5390 /* PokerChipAppTests.xctest */,
+				DEA05A092CE1EED5000E5390 /* PokerChipAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEA059F02CE1EED2000E5390 /* PokerChipApp */ = {
+			isa = PBXGroup;
+			children = (
+				DEA5D0282D9BBCE400B7BC28 /* GoogleService-Info.plist */,
+				DEAFEF362D71270C00B61E28 /* Info.plist */,
+				DEA059F12CE1EED2000E5390 /* PokerChipAppApp.swift */,
+				DEA059F32CE1EED2000E5390 /* ContentView.swift */,
+				DE7FB8FF2D9D2B5200217275 /* Views */,
+				DE7FB8F62D9BD67200217275 /* Authentication */,
+				DEA059F52CE1EED4000E5390 /* Assets.xcassets */,
+				DEA059F72CE1EED4000E5390 /* PokerChipApp.entitlements */,
+				DEA059F82CE1EED4000E5390 /* Preview Content */,
+			);
+			path = PokerChipApp;
+			sourceTree = "<group>";
+		};
+		DEA059F82CE1EED4000E5390 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DEA059F92CE1EED4000E5390 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DEA05A022CE1EED5000E5390 /* PokerChipAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEA05A032CE1EED5000E5390 /* PokerChipAppTests.swift */,
+			);
+			path = PokerChipAppTests;
+			sourceTree = "<group>";
+		};
+		DEA05A0C2CE1EED5000E5390 /* PokerChipAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEA05A0D2CE1EED5000E5390 /* PokerChipAppUITests.swift */,
+				DEA05A0F2CE1EED5000E5390 /* PokerChipAppUITestsLaunchTests.swift */,
+			);
+			path = PokerChipAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEA059ED2CE1EED2000E5390 /* PokerChipApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA05A132CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipApp" */;
+			buildPhases = (
+				DEA059EA2CE1EED2000E5390 /* Sources */,
+				DEA059EB2CE1EED2000E5390 /* Frameworks */,
+				DEA059EC2CE1EED2000E5390 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE7FB8FF2D9D2B5200217275 /* Views */,
+			);
+			name = PokerChipApp;
+			productName = PokerChipApp;
+			productReference = DEA059EE2CE1EED2000E5390 /* PokerChipApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEA059FE2CE1EED5000E5390 /* PokerChipAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA05A162CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipAppTests" */;
+			buildPhases = (
+				DEA059FB2CE1EED5000E5390 /* Sources */,
+				DEA059FC2CE1EED5000E5390 /* Frameworks */,
+				DEA059FD2CE1EED5000E5390 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA05A012CE1EED5000E5390 /* PBXTargetDependency */,
+			);
+			name = PokerChipAppTests;
+			productName = PokerChipAppTests;
+			productReference = DEA059FF2CE1EED5000E5390 /* PokerChipAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEA05A082CE1EED5000E5390 /* PokerChipAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA05A192CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipAppUITests" */;
+			buildPhases = (
+				DEA05A052CE1EED5000E5390 /* Sources */,
+				DEA05A062CE1EED5000E5390 /* Frameworks */,
+				DEA05A072CE1EED5000E5390 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA05A0B2CE1EED5000E5390 /* PBXTargetDependency */,
+			);
+			name = PokerChipAppUITests;
+			productName = PokerChipAppUITests;
+			productReference = DEA05A092CE1EED5000E5390 /* PokerChipAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEA059E62CE1EED2000E5390 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					DEA059ED2CE1EED2000E5390 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					DEA059FE2CE1EED5000E5390 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DEA059ED2CE1EED2000E5390;
+					};
+					DEA05A082CE1EED5000E5390 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DEA059ED2CE1EED2000E5390;
+					};
+				};
+			};
+			buildConfigurationList = DEA059E92CE1EED2000E5390 /* Build configuration list for PBXProject "PokerChipApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEA059E52CE1EED2000E5390;
+			packageReferences = (
+				DEA5D02A2D9BBEBD00B7BC28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = DEA059EF2CE1EED2000E5390 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEA059ED2CE1EED2000E5390 /* PokerChipApp */,
+				DEA059FE2CE1EED5000E5390 /* PokerChipAppTests */,
+				DEA05A082CE1EED5000E5390 /* PokerChipAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEA059EC2CE1EED2000E5390 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA059FA2CE1EED4000E5390 /* Preview Assets.xcassets in Resources */,
+				DEA059F62CE1EED4000E5390 /* Assets.xcassets in Resources */,
+				DEA5D0292D9BBCE400B7BC28 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA059FD2CE1EED5000E5390 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA05A072CE1EED5000E5390 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEA059EA2CE1EED2000E5390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA059F42CE1EED2000E5390 /* ContentView.swift in Sources */,
+				DEA059F22CE1EED2000E5390 /* PokerChipAppApp.swift in Sources */,
+				DE7FB8FE2D9BEC4C00217275 /* AuthViewModel.swift in Sources */,
+				DE7FB9052D9D2B9E00217275 /* AuthenticationView.swift in Sources */,
+				DE7FB8FC2D9BDCD300217275 /* AuthenticationManager.swift in Sources */,
+				DE7FB8FA2D9BD88000217275 /* SignInEmailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA059FB2CE1EED5000E5390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA05A042CE1EED5000E5390 /* PokerChipAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA05A052CE1EED5000E5390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA05A102CE1EED5000E5390 /* PokerChipAppUITestsLaunchTests.swift in Sources */,
+				DEA05A0E2CE1EED5000E5390 /* PokerChipAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEA05A012CE1EED5000E5390 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEA059ED2CE1EED2000E5390 /* PokerChipApp */;
+			targetProxy = DEA05A002CE1EED5000E5390 /* PBXContainerItemProxy */;
+		};
+		DEA05A0B2CE1EED5000E5390 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEA059ED2CE1EED2000E5390 /* PokerChipApp */;
+			targetProxy = DEA05A0A2CE1EED5000E5390 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DEA05A112CE1EED5000E5390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEA05A122CE1EED5000E5390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DEA05A142CE1EED5000E5390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PokerChipApp/PokerChipApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PokerChipApp/Preview Content\"";
+				DEVELOPMENT_TEAM = NZZPYJZMR4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokerChipApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PokerChipApp needs camera access to photograph your chips at the end of the game so it can estimate your final count.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEA05A152CE1EED5000E5390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PokerChipApp/PokerChipApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PokerChipApp/Preview Content\"";
+				DEVELOPMENT_TEAM = NZZPYJZMR4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokerChipApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PokerChipApp needs camera access to photograph your chips at the end of the game so it can estimate your final count.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DEA05A172CE1EED5000E5390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerChipApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokerChipApp";
+			};
+			name = Debug;
+		};
+		DEA05A182CE1EED5000E5390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerChipApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokerChipApp";
+			};
+			name = Release;
+		};
+		DEA05A1A2CE1EED5000E5390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerChipApp;
+			};
+			name = Debug;
+		};
+		DEA05A1B2CE1EED5000E5390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vanarp.PokerChipAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerChipApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEA059E92CE1EED2000E5390 /* Build configuration list for PBXProject "PokerChipApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA05A112CE1EED5000E5390 /* Debug */,
+				DEA05A122CE1EED5000E5390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA05A132CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA05A142CE1EED5000E5390 /* Debug */,
+				DEA05A152CE1EED5000E5390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA05A162CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA05A172CE1EED5000E5390 /* Debug */,
+				DEA05A182CE1EED5000E5390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA05A192CE1EED5000E5390 /* Build configuration list for PBXNativeTarget "PokerChipAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA05A1A2CE1EED5000E5390 /* Debug */,
+				DEA05A1B2CE1EED5000E5390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEA5D02A2D9BBEBD00B7BC28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE7FB8F42D9BD3CD00217275 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEA5D02A2D9BBEBD00B7BC28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DEA5D02B2D9BBEBD00B7BC28 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEA5D02A2D9BBEBD00B7BC28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DEA059E62CE1EED2000E5390 /* Project object */;
+}
