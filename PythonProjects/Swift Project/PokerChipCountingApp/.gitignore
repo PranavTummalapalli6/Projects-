@@ -1,0 +1,27 @@
+# macOS / Xcode
+.DS_Store
+**/.DS_Store
+xcuserdata/
+DerivedData/
+build/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+
+# Secrets and local config — never commit
+secrets/
+**/secrets/
+.env
+*.pem
+*service-account*.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Personal files kept in the working tree but not part of the repo:
+# real chip photos used for detection testing, and a stray merge archive.
+PokerChipApp/test_photos/
+Archive.zip

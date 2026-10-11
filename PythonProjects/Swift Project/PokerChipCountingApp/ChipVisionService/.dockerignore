@@ -1,0 +1,13 @@
+# Keep credentials and local clutter out of the build context entirely — the
+# image only needs requirements.txt and app/.
+secrets/
+.env
+.env.*
+!.env.example
+.git
+**/__pycache__/
+*.pyc
+.pytest_cache/
+tests/
+test_detection.py;C
+*.md

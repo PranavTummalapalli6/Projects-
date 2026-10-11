@@ -1,0 +1,16 @@
+services:
+  chip-vision-service:
+    build: .
+    container_name: chip_vision_service
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/firebase-service-account.json
+      - FIREBASE_STORAGE_BUCKET=pokerchipapp-f7a84.firebasestorage.app
+    volumes:
+      - ./secrets/firebase-service-account.json:/secrets/firebase-service-account.json:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

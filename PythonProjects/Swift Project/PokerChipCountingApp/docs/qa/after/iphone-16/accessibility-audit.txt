@@ -1,0 +1,40 @@
+[01-home-first-run] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f1517b0, {{32.0, 225.0}, {188.7, 14.3}}, identifier: 'home.howItWorks', label: 'HOW A GAME NIGHT WORKS'
+Element subtree:
+ →StaticTex — Text of this element may be clipped at larger Dynamic Type sizes.
+[02-buy-in-empty] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f16f6e0, {{15.8, 318.3}, {143.3, 14.3}}, label: 'NUMBER OF PLAYERS'
+Element subtree:
+ →StaticText, 0x10f16f6e0, {{15.8, 318.3}, {143 — Text of this element may be clipped at larger Dynamic Type sizes.
+[02-buy-in-empty] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f5654a0, {{15.8, 473.2}, {114.3, 14.3}}, label: 'CHIPS YOU HAVE'
+Element subtree:
+ →StaticText, 0x10f5654a0, {{15.8, 473.2}, {114.3, — Text of this element may be clipped at larger Dynamic Type sizes.
+[03-buy-in-filled] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f320610, {{15.8, 318.3}, {143.3, 14.3}}, label: 'NUMBER OF PLAYERS'
+Element subtree:
+ →StaticText, 0x10f320610, {{15.8, 318.3}, {143 — Text of this element may be clipped at larger Dynamic Type sizes.
+[03-buy-in-filled] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f5ab3f0, {{15.8, 473.2}, {114.3, 14.3}}, label: 'CHIPS YOU HAVE'
+Element subtree:
+ →StaticText, 0x10f5ab3f0, {{15.8, 473.2}, {114.3, — Text of this element may be clipped at larger Dynamic Type sizes.
+[03d-buy-in-with-a-chip-set] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f5be450, {{15.8, 291.3}, {143.3, 14.3}}, label: 'NUMBER OF PLAYERS'
+Element subtree:
+ →StaticText, 0x10f5be450, {{15.8, 291.3}, {143 — Text of this element may be clipped at larger Dynamic Type sizes.
+[03d-buy-in-with-a-chip-set] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x10f1f4210, {{15.8, 446.2}, {114.3, 14.3}}, label: 'CHIPS YOU HAVE'
+Element subtree:
+ →StaticText, 0x10f1f4210, {{15.8, 446.2}, {114.3, — Text of this element may be clipped at larger Dynamic Type sizes.
+[20-poker-health] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x115b43ac0, {{32.0, 780.3}, {129.7, 14.3}}, label: 'DAILY BREAKDOWN'
+Element subtree:
+ →StaticText, 0x115b43ac0, {{32.0, 780.3}, {129.7 — Text of this element may be clipped at larger Dynamic Type sizes.
+[20b-poker-health-bottom] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x115a6c0b0, {{32.0, 524.0}, {129.7, 14.3}}, label: 'DAILY BREAKDOWN'
+Element subtree:
+ →StaticText, 0x115a6c0b0, {{32.0, 524.0}, {129.7 — Text of this element may be clipped at larger Dynamic Type sizes.
+[22-history] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: SearchField, 0x115986660, {{16.0, 98.7}, {361.0, 36.0}}, label: 'Place, player or note', placeholderValue: 'Place, player or note'
+Element subtree:
+ — Text of this element may be clipped at larger Dynamic Type sizes.
+[23-night-detail] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x115b99dc0, {{28.0, 223.7}, {90.3, 14.3}}, label: 'YOUR RESULT'
+Element subtree:
+ →StaticText, 0x115b99dc0, {{28.0, 223.7}, {90.3, 14.3 — Text of this element may be clipped at larger Dynamic Type sizes.
+[25b-poker-health-bottom] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: StaticText, 0x115abf960, {{32.0, 475.0}, {129.7, 14.3}}, label: 'DAILY BREAKDOWN'
+Element subtree:
+ →StaticText, 0x115abf960, {{32.0, 475.0}, {129.7 — Text of this element may be clipped at larger Dynamic Type sizes.
+[29-email-sign-in] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: TextField, 0x115ad95a0, {{15.5, 178.5}, {362.0, 49.0}}, identifier: 'auth.emailField', placeholderValue: 'you@example.com', value: you@example.com
+E — Text of this element may be clipped at larger Dynamic Type sizes.
+[30-email-validation] XCUIAccessibilityAuditType(rawValue: 131072) — Text clipped — Attributes: TextField, 0x1159fbab0, {{15.2, 178.2}, {362.5, 49.5}}, identifier: 'auth.emailField', placeholderValue: 'you@example.com', value: you@example.com
+E — Text of this element may be clipped at larger Dynamic Type sizes.

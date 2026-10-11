@@ -1,0 +1,91 @@
+# Written but not yet run: the repository has no remote. The commands mirror
+# what was run by hand (see docs/QA.md), so a first run on GitHub is the test of
+# this file, not of the code.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ios:
+    runs-on: macos-15
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests
+        run: >
+          xcodebuild test
+          -project PokerChipApp.xcodeproj -scheme PokerChipApp
+          -destination 'platform=iOS Simulator,name=iPhone 16'
+          -only-testing:PokerChipAppTests
+      - name: UI tests (stubbed sign-in and network)
+        run: >
+          xcodebuild test
+          -project PokerChipApp.xcodeproj -scheme PokerChipApp
+          -destination 'platform=iOS Simulator,name=iPhone 16'
+          -only-testing:PokerChipAppUITests/PokerChipAppUITests
+          -skip-testing:PokerChipAppUITests/PokerChipAppUITests/testLaunchPerformance
+
+  # The App Store build, unsigned (no certificate is needed to find these problems).
+  # Mirrors the two archives checked by hand: see docs/RELEASE.md.
+  release-archive:
+    runs-on: macos-15
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - name: With an https backend address the archive succeeds
+        run: >
+          xcodebuild archive
+          -project PokerChipApp.xcodeproj -scheme PokerChipApp -configuration Release
+          -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/ok.xcarchive"
+          CODE_SIGNING_ALLOWED=NO API_BASE_URL=https://chips.example.invalid
+      - name: It carries the widget extension and the privacy manifest
+        run: |
+          APP="$RUNNER_TEMP/ok.xcarchive/Products/Applications/PokerChipApp.app"
+          test -d "$APP/PlugIns/PokerChipWidgets.appex"
+          test -f "$APP/PrivacyInfo.xcprivacy"
+      - name: With the placeholder address the archive is refused
+        run: |
+          if xcodebuild archive \
+               -project PokerChipApp.xcodeproj -scheme PokerChipApp -configuration Release \
+               -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/bad.xcarchive" \
+               CODE_SIGNING_ALLOWED=NO > "$RUNNER_TEMP/bad.log" 2>&1; then
+            echo "The Release guard let the placeholder through."; exit 1
+          fi
+          grep -q "Release build still contains development values" "$RUNNER_TEMP/bad.log"
+
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ChipVisionService
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - name: Container builds
+        run: docker build -t chip-vision-service:ci .
+
+  release-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No development leftovers in sources or settings
+        run: |
+          # Only where a permission string lives (the build-phase script itself
+          # mentions the phrase, because that is what it searches for).
+          if grep -n "INFOPLIST_KEY_NS.*reason app trail" PokerChipApp.xcodeproj/project.pbxproj \
+             || grep -n "reason app trail" PokerChipApp/Info.plist; then
+            echo "A placeholder camera permission string is back."; exit 1
+          fi
+          # The Release backend address is allowed to be the placeholder until the
+          # service is deployed; an App Store archive fails separately until then.
+          if grep -rn "192\.168\." PokerChipApp --include=*.swift; then
+            echo "A LAN address is hard-coded in Swift source; use the API_BASE_URL build setting."; exit 1
+          fi

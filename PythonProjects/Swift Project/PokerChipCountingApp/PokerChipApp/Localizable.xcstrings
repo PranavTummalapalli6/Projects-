@@ -1,0 +1,1116 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ %@, %@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@, %3$@, %4$@"
+          }
+        }
+      }
+    },
+    "%@ %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$lld"
+          }
+        }
+      }
+    },
+    "%@ / %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ / %2$@"
+          }
+        }
+      }
+    },
+    "%@ buy-in" : {
+
+    },
+    "%@ buy-in, %lld players, %@ chips" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ buy-in, %2$lld players, %3$@ chips"
+          }
+        }
+      }
+    },
+    "%@ chip" : {
+
+    },
+    "%@ chip value" : {
+
+    },
+    "%@ chip value, %@ each" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ chip value, %2$@ each"
+          }
+        }
+      }
+    },
+    "%@ chip, %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ chip, %2$lld of %3$lld"
+          }
+        }
+      }
+    },
+    "%@ chips" : {
+
+    },
+    "%@ chips in this photo" : {
+
+    },
+    "%@ each" : {
+
+    },
+    "%@ in" : {
+
+    },
+    "%@ in play · %lld players" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ in play · %2$lld players"
+          }
+        }
+      }
+    },
+    "%@ is %@ %@ the %@ buy-in" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is %2$@ %3$@ the %4$@ buy-in"
+          }
+        }
+      }
+    },
+    "%@ on breaks so far. That isn't counted as time played." : {
+
+    },
+    "%@ pays %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@"
+          }
+        }
+      }
+    },
+    "%@ pile, %lld %@, %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pile, %2$lld %3$@, %4$lld of %5$lld"
+          }
+        }
+      }
+    },
+    "%@ played, %lld percent of your %lld hour limit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ played, %2$lld percent of your %3$lld hour limit"
+          }
+        }
+      }
+    },
+    "%@ · %@ in play · %lld players" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ in play · %3$lld players"
+          }
+        }
+      }
+    },
+    "%@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ → %2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld chips" : {
+
+    },
+    "%lld chips · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld chips · %2$@"
+          }
+        }
+      }
+    },
+    "%lld each" : {
+
+    },
+    "%lld in all" : {
+
+    },
+    "%lld in this photo" : {
+
+    },
+    "%lld night%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld night%2$@ · %3$@"
+          }
+        }
+      }
+    },
+    "%lld photo%@ · %lld chip%@ counted" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld photo%2$@ · %3$lld chip%4$@ counted"
+          }
+        }
+      }
+    },
+    "%lld pieces" : {
+
+    },
+    "%lld player%@ still to cash out." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld player%2$@ still to cash out."
+          }
+        }
+      }
+    },
+    "%lld players" : {
+
+    },
+    "%lld still to cash out." : {
+
+    },
+    "%lld%% of your %lld‑hour limit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%% of your %2$lld‑hour limit"
+          }
+        }
+      }
+    },
+    "%lldh" : {
+
+    },
+    "(house)" : {
+
+    },
+    "0" : {
+
+    },
+    "0.00" : {
+
+    },
+    "1×" : {
+
+    },
+    "2×" : {
+
+    },
+    "3×" : {
+
+    },
+    "A common set split evenly across your colours. Change any count below to match what's in your case." : {
+
+    },
+    "A guest account keeps your games private to this app. You can add an email later in Settings to keep them if you change phones." : {
+
+    },
+    "About %lld big blinds in a starting stack, and every bet can be paid with your smallest chip." : {
+
+    },
+    "Add %@" : {
+
+    },
+    "Add a player" : {
+
+    },
+    "Add an email" : {
+
+    },
+    "Add an email to keep your games if you switch phones." : {
+
+    },
+    "Add an email to your guest account. Everything you've saved stays with it." : {
+
+    },
+    "After %lld hour%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "After %1$lld hour%2$@"
+          }
+        }
+      }
+    },
+    "Amount" : {
+
+    },
+    "Another option" : {
+
+    },
+    "Any place" : {
+
+    },
+    "Any stake" : {
+
+    },
+    "At least 6 characters." : {
+
+    },
+    "Bank check" : {
+
+    },
+    "Bankroll over %lld nights" : {
+
+    },
+    "Blinds, %@ small, %@ big" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Blinds, %1$@ small, %2$@ big"
+          }
+        }
+      }
+    },
+    "Break-even" : {
+
+    },
+    "Buy-in" : {
+
+    },
+    "Buy-in amount" : {
+
+    },
+    "Buy-ins" : {
+
+    },
+    "Call %@" : {
+
+    },
+    "Camera tilted %lld° down" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Cash out" : {
+
+    },
+    "Cash out %@" : {
+
+    },
+    "Cash out · %@" : {
+
+    },
+    "Cash out…" : {
+
+    },
+    "Cash-out" : {
+
+    },
+    "Cash-out amount" : {
+
+    },
+    "Cashed out %@" : {
+
+    },
+    "Cashing out" : {
+
+    },
+    "Chat or read more online" : {
+
+    },
+    "Check each chip" : {
+
+    },
+    "Check each pile" : {
+
+    },
+    "Check the photo" : {
+
+    },
+    "Chip Counter" : {
+
+    },
+    "Chip Counter is for keeping track of home games. It doesn't handle money or take bets." : {
+
+    },
+    "Chip values" : {
+
+    },
+    "Chips per player" : {
+
+    },
+    "Choose a value to fix it while the rest is worked out" : {
+
+    },
+    "Choose what the difference was to continue." : {
+
+    },
+    "Choose whose chips to count again" : {
+
+    },
+    "Chosen" : {
+
+    },
+    "Chosen by the app" : {
+
+    },
+    "Clear" : {
+
+    },
+    "Close the card" : {
+
+    },
+    "Closing saves the night to your history. You can reopen it to fix a mistake." : {
+
+    },
+    "Counting the chips…" : {
+
+    },
+    "Counts stay within your %lld-chip set, and each colour keeps the value printed on it." : {
+
+    },
+    "Counts stay within your %lld-chip set." : {
+
+    },
+    "Custom" : {
+
+    },
+    "Daily playtime for the last seven days" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete account" : {
+
+    },
+    "Delete night" : {
+
+    },
+    "Delete this night" : {
+
+    },
+    "Delete this night?" : {
+
+    },
+    "Delete your account?" : {
+
+    },
+    "Difference" : {
+
+    },
+    "Done" : {
+
+    },
+    "Each player gets" : {
+
+    },
+    "Each player gets %lld chips worth %@ in total" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Each player gets %1$lld chips worth %2$@ in total"
+          }
+        }
+      }
+    },
+    "Each player needs a different name, so payments are clear." : {
+
+    },
+    "Each player's chips add up to %@" : {
+
+    },
+    "Email" : {
+
+    },
+    "End night" : {
+
+    },
+    "End the night?" : {
+
+    },
+    "Enter a value for every colour to start." : {
+
+    },
+    "Enter an amount above %@." : {
+
+    },
+    "Enter an amount like %@." : {
+
+    },
+    "Even" : {
+
+    },
+    "Every stack adds up to exactly the buy-in. Each colour is worth more than the one before it, and there are fewer of them, the way a real set is racked. Values come from a clean ladder — 5¢, 10¢, then multiples of 25¢ — wherever the buy-in allows, so a stack is easy to check in your head." : {
+
+    },
+    "Everyone broke even." : {
+
+    },
+    "Everyone broke even. Nobody owes anything." : {
+
+    },
+    "Everything recorded for it — buy-ins, cash-outs and notes — goes with it." : {
+
+    },
+    "Everything recorded for it — buy-ins, cash-outs and notes — goes with it. You can undo for a few seconds." : {
+
+    },
+    "Export every night as a spreadsheet — one row per player per night. For your own records, not tax advice." : {
+
+    },
+    "Fewer players means more chips each; more players means fewer." : {
+
+    },
+    "Finish or delete the night in progress to start a new one." : {
+
+    },
+    "Fixed" : {
+
+    },
+    "For this night." : {
+
+    },
+    "GAME NIGHT" : {
+
+    },
+    "Game night" : {
+
+    },
+    "Game night in progress" : {
+
+    },
+    "Game over" : {
+
+    },
+    "Hide password" : {
+
+    },
+    "History" : {
+
+    },
+    "Hours" : {
+
+    },
+    "Hours played in each of the last four weeks" : {
+
+    },
+    "How the chips are laid out" : {
+
+    },
+    "How to cash out" : {
+
+    },
+    "If it stops being fun" : {
+
+    },
+    "In" : {
+
+    },
+    "In %@" : {
+
+    },
+    "In play" : {
+
+    },
+    "In progress" : {
+
+    },
+    "Keep" : {
+
+    },
+    "Keep it" : {
+
+    },
+    "Keep playing" : {
+
+    },
+    "Last game" : {
+
+    },
+    "Let the app choose" : {
+
+    },
+    "Loading this week's playtime" : {
+
+    },
+    "Loading your nights" : {
+
+    },
+    "Loading your stats" : {
+
+    },
+    "Looking for photos…" : {
+
+    },
+    "Lower the blinds" : {
+
+    },
+    "MY WEEK AT THE TABLE" : {
+
+    },
+    "Mode" : {
+
+    },
+    "Money in" : {
+
+    },
+    "Month" : {
+
+    },
+    "More" : {
+
+    },
+    "More for %@" : {
+
+    },
+    "My chips have values printed on them" : {
+
+    },
+    "Name" : {
+
+    },
+    "Name of player %lld" : {
+
+    },
+    "Name of the new player" : {
+
+    },
+    "Names are optional. Anyone left blank is called Player 2, Player 3… The first seat is you." : {
+
+    },
+    "Net" : {
+
+    },
+    "Net by month" : {
+
+    },
+    "New name" : {
+
+    },
+    "Night" : {
+
+    },
+    "No chips were found in this photo. Add them, or count by hand." : {
+
+    },
+    "No photos are stored for this night. Photos are only kept when a player's chips were counted from one, and for 30 days." : {
+
+    },
+    "Not cashed out" : {
+
+    },
+    "Not now" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Notes — anything worth remembering" : {
+
+    },
+    "Numbers checked %@." : {
+
+    },
+    "Off" : {
+
+    },
+    "On a break" : {
+
+    },
+    "Open the list" : {
+
+    },
+    "Option %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Option %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Out" : {
+
+    },
+    "Out %@" : {
+
+    },
+    "Password" : {
+
+    },
+    "Pat's garage" : {
+
+    },
+    "Photo %lld" : {
+
+    },
+    "Photo %lld, %lld chips found" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Photo %1$lld, %2$lld chips found"
+          }
+        }
+      }
+    },
+    "Photo of %@'s chips" : {
+
+    },
+    "Photos taken when players cashed out are kept privately for 30 days." : {
+
+    },
+    "Place" : {
+
+    },
+    "Place, player or note" : {
+
+    },
+    "Play" : {
+
+    },
+    "Play at %@" : {
+
+    },
+    "Player %lld" : {
+
+    },
+    "Players" : {
+
+    },
+    "Plenty of people find poker harder to put down than they expected. If it's weighing on you or someone close to you, talking to someone helps. It's free, private, and nobody will judge." : {
+
+    },
+    "Poker Health" : {
+
+    },
+    "Poker Health. You've played %@ this week." : {
+
+    },
+    "Poker chip" : {
+
+    },
+    "Poker is best when it stays fun. These are yours to set, change or ignore — they stay on this iPhone." : {
+
+    },
+    "Printed on the chips" : {
+
+    },
+    "Printed value of %@ chips" : {
+
+    },
+    "Raise the blinds" : {
+
+    },
+    "Rebuy" : {
+
+    },
+    "Rebuy for %@" : {
+
+    },
+    "Regulars" : {
+
+    },
+    "Remove %@?" : {
+
+    },
+    "Remove from the night" : {
+
+    },
+    "Remove this rebuy of %@" : {
+
+    },
+    "Rename" : {
+
+    },
+    "Result" : {
+
+    },
+    "Retake photo" : {
+
+    },
+    "SETTLE UP" : {
+
+    },
+    "Select all" : {
+
+    },
+    "Selected" : {
+
+    },
+    "Send a text" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Settle up" : {
+
+    },
+    "Share as a PDF" : {
+
+    },
+    "Share as a picture" : {
+
+    },
+    "Share as image" : {
+
+    },
+    "Share as text" : {
+
+    },
+    "Share payments" : {
+
+    },
+    "Share the card" : {
+
+    },
+    "Show password" : {
+
+    },
+    "Show the chip values" : {
+
+    },
+    "Sign in with email" : {
+
+    },
+    "Sign out" : {
+
+    },
+    "Sign out of the guest account?" : {
+
+    },
+    "Sign out?" : {
+
+    },
+    "Someone here already has that name." : {
+
+    },
+    "Standard\ncamera" : {
+
+    },
+    "Start the break" : {
+
+    },
+    "Started with %lld" : {
+
+    },
+    "Stats" : {
+
+    },
+    "Step %lld of %lld · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Step %1$lld of %2$lld · %3$@"
+          }
+        }
+      }
+    },
+    "Step %lld of %lld, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Step %1$lld of %2$lld, %3$@"
+          }
+        }
+      }
+    },
+    "Step %lld. %@. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Step %1$lld. %2$@. %3$@"
+          }
+        }
+      }
+    },
+    "Step away on purpose. No new nights can be started for a while, but you can still finish one in progress and look at your history." : {
+
+    },
+    "Suggested" : {
+
+    },
+    "Take a %@ break?" : {
+
+    },
+    "Take a break" : {
+
+    },
+    "Take photo" : {
+
+    },
+    "Tap a box to change how many chips are in that pile, or its colour. A pile counted from the side is an estimate." : {
+
+    },
+    "Tap a circle to change its colour or remove it." : {
+
+    },
+    "Tap the colours in your set. Chip values are worked out only for these." : {
+
+    },
+    "Tap the photo where the chip is" : {
+
+    },
+    "Tap the photo where the pile is" : {
+
+    },
+    "That's %lld of your %lld chips." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "That's %1$lld of your %2$lld chips."
+          }
+        }
+      }
+    },
+    "That's the most photos one cash-out can use. Fix any chips that are wrong, or start over." : {
+
+    },
+    "That's you" : {
+
+    },
+    "The clock stops. Next, each player cashes out their chips." : {
+
+    },
+    "The smallest chip is %@, so that's the smallest bet and the unit the blinds are built from. Aim for 20–30 chips a player: fewer is quicker to count and rack, more gives finer change." : {
+
+    },
+    "Their buy-ins come out of the night's totals." : {
+
+    },
+    "Then only counts are worked out — each colour keeps its printed value." : {
+
+    },
+    "They join in for %@. Leave the name blank to be called %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "They join in for %1$@. Leave the name blank to be called %2$@."
+          }
+        }
+      }
+    },
+    "This chip is…" : {
+
+    },
+    "This is me" : {
+
+    },
+    "This permanently deletes your account, your saved games and any chip photos. It can't be undone." : {
+
+    },
+    "This photo may not count well" : {
+
+    },
+    "This pile has…" : {
+
+    },
+    "This week" : {
+
+    },
+    "Time played" : {
+
+    },
+    "Timing" : {
+
+    },
+    "Total in" : {
+
+    },
+    "Use it anyway" : {
+
+    },
+    "Use the standard camera" : {
+
+    },
+    "Use this when the chips are already counted, or this player is taking a different amount." : {
+
+    },
+    "Uses %lld of your %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Uses %1$lld of your %2$lld"
+          }
+        }
+      }
+    },
+    "Value each" : {
+
+    },
+    "Values with a lock are the ones you fixed; the rest is worked out around them." : {
+
+    },
+    "Version" : {
+
+    },
+    "Week" : {
+
+    },
+    "Weekly loss limit" : {
+
+    },
+    "Where was it?" : {
+
+    },
+    "Where you're playing" : {
+
+    },
+    "Whose chips should be counted again?" : {
+
+    },
+    "Why these values?" : {
+
+    },
+    "Work out chip values, run the night, count the stacks, settle up and see how much you play." : {
+
+    },
+    "Working out chip values" : {
+
+    },
+    "You" : {
+
+    },
+    "You can sign back in any time." : {
+
+    },
+    "You can try again, or use the standard camera instead." : {
+
+    },
+    "You finished even." : {
+
+    },
+    "You weren't playing in this one." : {
+
+    },
+    "You won't be able to start a new night until %@. This can't be undone early." : {
+
+    },
+    "You're on a break until %@. New nights are paused; your history and any night already in progress are all still here. It can't be cut short — that's what makes it work." : {
+
+    },
+    "Your chip set" : {
+
+    },
+    "Your games are saved to this account." : {
+
+    },
+    "Your limit" : {
+
+    },
+    "Your name" : {
+
+    },
+    "Your nights stay on this iPhone, but a guest account's backup can't be recovered after you sign out. Add an email first to keep it." : {
+
+    },
+    "Your nights — who played, what each person put in and took out, where, and any notes — are kept on this iPhone and, when you're signed in, backed up to your account. Deleting a night removes it from the backup too, along with the photos taken at its cash-outs. Photos are sent securely to the counting service and kept private to your account." : {
+
+    },
+    "Your photo, with a box round each of the %lld piles found" : {
+
+    },
+    "Your photo, with a ring on each of the %lld chips found" : {
+
+    },
+    "Your result" : {
+
+    },
+    "Zoom" : {
+
+    },
+    "available" : {
+
+    },
+    "chip" : {
+
+    },
+    "chips" : {
+
+    },
+    "not available" : {
+
+    },
+    "you" : {
+
+    },
+    "× %lld" : {
+
+    },
+    "—" : {
+
+    }
+  },
+  "version" : "1.0"
+}
