@@ -1,0 +1,30 @@
+# Supabase CLI config (local dev: `supabase start`, `supabase db reset`).
+project_id = "pickleball-now"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+enable_anonymous_sign_ins = true
+enable_signup = true
+
+[storage]
+enabled = true
+file_size_limit = "3MiB"
+
+[functions.region-discovery]
+verify_jwt = true

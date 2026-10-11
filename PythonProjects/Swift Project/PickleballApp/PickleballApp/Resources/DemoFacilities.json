@@ -1,0 +1,1429 @@
+[
+ {
+  "id": "86e30d5a-1957-5c38-bbd3-6f738ffe1429",
+  "name": "Laurel Creek Park",
+  "latitude": 38.8462,
+  "longitude": -77.3064,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 6,
+  "default_pickleball_courts": 4,
+  "court_type": "pickleball_lined_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "paddle_stack",
+  "typical_game_minutes": 13,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.0-3.5",
+     "weight": 10
+    },
+    {
+     "band": "3.5-4.0",
+     "weight": 12
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 5
+    }
+   ],
+   "observation_count": 27,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "open_play",
+    "share": 0.8,
+    "observation_count": 8
+   },
+   {
+    "tag": "mostly_doubles",
+    "share": 0.7,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "5feb150f-72cf-52b2-872d-edd609a2a013",
+  "name": "Dinkhouse Indoor Club",
+  "latitude": 38.8601,
+  "longitude": -77.2742,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 8,
+  "default_pickleball_courts": 8,
+  "court_type": "dedicated_pickleball",
+  "indoor_outdoor": "indoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "reservation_only",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "day_pass_available",
+   "access_notes": "$15 day pass; reserve a court in their app",
+   "reservation_available": true,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "day_pass",
+   "day_pass_price": 15
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "06:00",
+    "closes": "23:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.5-4.0",
+     "weight": 9
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 9
+    },
+    {
+     "band": "4.5+",
+     "weight": 3
+    }
+   ],
+   "observation_count": 21,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "competitive",
+    "share": 0.5,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "a76ecbcc-8039-5439-aede-9cd8bbcd9307",
+  "name": "Oak Hollow Community Courts",
+  "latitude": 38.8303,
+  "longitude": -77.329,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 4,
+  "default_pickleball_courts": 4,
+  "court_type": "dedicated_pickleball",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "beginner",
+     "weight": 6
+    },
+    {
+     "band": "2.5-3.0",
+     "weight": 9
+    },
+    {
+     "band": "3.0-3.5",
+     "weight": 6
+    }
+   ],
+   "observation_count": 21,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "beginner_friendly",
+    "share": 0.7,
+    "observation_count": 8
+   },
+   {
+    "tag": "casual",
+    "share": 0.6,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "69d54071-9dd6-55a2-8ce9-a8f18874286d",
+  "name": "Ridgeview HOA Courts",
+  "latitude": 38.8689,
+  "longitude": -77.3215,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 2,
+  "default_pickleball_courts": 2,
+  "court_type": "pickleball_lined_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "resident_guest_allowed",
+   "access_notes": "Residents and accompanied guests only",
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "membership",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": null,
+  "culture": []
+ },
+ {
+  "id": "30d29c91-5f85-5f55-9cff-6abad150dfe0",
+  "name": "Mason Ridge Recreation Center",
+  "latitude": 38.8389,
+  "longitude": -77.2867,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 6,
+  "default_pickleball_courts": 6,
+  "court_type": "multi_use",
+  "indoor_outdoor": "indoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "organized_open_play",
+  "typical_game_minutes": 12,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "day_pass_available",
+   "access_notes": "$8 recreation center day pass",
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "day_pass",
+   "day_pass_price": 8
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "06:00",
+    "closes": "23:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "2.5-3.0",
+     "weight": 5
+    },
+    {
+     "band": "3.0-3.5",
+     "weight": 8
+    },
+    {
+     "band": "3.5-4.0",
+     "weight": 4
+    }
+   ],
+   "observation_count": 17,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "open_play",
+    "share": 0.9,
+    "observation_count": 8
+   },
+   {
+    "tag": "mixed",
+    "share": 0.6,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "60eb8144-718b-5299-8430-3403f950dc2d",
+  "name": "Willow Pond Park",
+  "latitude": 38.8792,
+  "longitude": -77.3011,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 4,
+  "default_pickleball_courts": 4,
+  "court_type": "convertible_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.0-3.5",
+     "weight": 3
+    },
+    {
+     "band": "3.5-4.0",
+     "weight": 2
+    }
+   ],
+   "observation_count": 5,
+   "newest_days_ago": 4
+  },
+  "culture": []
+ },
+ {
+  "id": "0318205a-8745-54bf-b8f2-cc25e4f2ae8a",
+  "name": "Cedar Run Pickleball Complex",
+  "latitude": 38.8211,
+  "longitude": -77.265,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 10,
+  "default_pickleball_courts": 10,
+  "court_type": "dedicated_pickleball",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "paddle_stack",
+  "typical_game_minutes": 14,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.5-4.0",
+     "weight": 6
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 12
+    },
+    {
+     "band": "4.5+",
+     "weight": 8
+    }
+   ],
+   "observation_count": 26,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "competitive",
+    "share": 0.7,
+    "observation_count": 8
+   },
+   {
+    "tag": "challenge_court",
+    "share": 0.5,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "d0542d4f-0d01-5678-82bd-cc449f5ae6b5",
+  "name": "Pine Hill Elementary Courts",
+  "latitude": 38.855,
+  "longitude": -77.34,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 2,
+  "default_pickleball_courts": 2,
+  "court_type": "multi_use",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "school_restricted",
+   "access_notes": "Public after school hours and weekends",
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 1,
+    "opens": "16:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "16:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "16:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "16:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "16:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 0,
+    "opens": "08:00",
+    "closes": "21:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "08:00",
+    "closes": "21:00"
+   }
+  ],
+  "skill": null,
+  "culture": []
+ },
+ {
+  "id": "9ade8153-6005-540e-ad7e-556c7c07d74a",
+  "name": "Hunters Mill Racquet Club",
+  "latitude": 38.892,
+  "longitude": -77.293,
+  "city": "Vienna",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 12,
+  "default_pickleball_courts": 6,
+  "court_type": "mixed_facility",
+  "indoor_outdoor": "both",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "reservation_only",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "membership_required",
+   "access_notes": "Members only",
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "membership",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "06:00",
+    "closes": "23:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.5-4.0",
+     "weight": 5
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 5
+    }
+   ],
+   "observation_count": 10,
+   "newest_days_ago": 4
+  },
+  "culture": []
+ },
+ {
+  "id": "9cdd7c33-6b7d-551d-a0d6-fca6fc7bd82c",
+  "name": "Fox Glen Neighborhood Courts",
+  "latitude": 38.866,
+  "longitude": -77.26,
+  "city": "Fairfax",
+  "state": "VA",
+  "time_zone": "America/New_York",
+  "total_physical_courts": 2,
+  "default_pickleball_courts": 2,
+  "court_type": "pickleball_lined_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "unknown",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "community_reported",
+  "existence_confidence": 0.3,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": null,
+  "culture": []
+ },
+ {
+  "id": "edbfb24a-3f05-5e43-a5f2-5babf02e272c",
+  "name": "Memorial Grove Park",
+  "latitude": 37.323,
+  "longitude": -122.042,
+  "city": "Cupertino",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 8,
+  "default_pickleball_courts": 6,
+  "court_type": "pickleball_lined_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "paddle_stack",
+  "typical_game_minutes": 13,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.0-3.5",
+     "weight": 9
+    },
+    {
+     "band": "3.5-4.0",
+     "weight": 11
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 4
+    }
+   ],
+   "observation_count": 24,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "open_play",
+    "share": 0.8,
+    "observation_count": 8
+   },
+   {
+    "tag": "mostly_doubles",
+    "share": 0.8,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "3b7cea8b-4203-5601-ad81-9f3fc5e4da76",
+  "name": "Stevens Creek Indoor Pickleball",
+  "latitude": 37.3236,
+  "longitude": -122.013,
+  "city": "Cupertino",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 10,
+  "default_pickleball_courts": 10,
+  "court_type": "dedicated_pickleball",
+  "indoor_outdoor": "indoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "reservation_only",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "day_pass_available",
+   "access_notes": "$18 day pass",
+   "reservation_available": true,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "day_pass",
+   "day_pass_price": 18
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "06:00",
+    "closes": "23:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "06:00",
+    "closes": "23:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.5-4.0",
+     "weight": 8
+    },
+    {
+     "band": "4.0-4.5",
+     "weight": 8
+    },
+    {
+     "band": "4.5+",
+     "weight": 4
+    }
+   ],
+   "observation_count": 20,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "competitive",
+    "share": 0.5,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "28128b9d-6a1f-58b1-8f15-112a3cec4c15",
+  "name": "Linda Vista Courts",
+  "latitude": 37.3115,
+  "longitude": -122.057,
+  "city": "Cupertino",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 4,
+  "default_pickleball_courts": 4,
+  "court_type": "dedicated_pickleball",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "beginner",
+     "weight": 5
+    },
+    {
+     "band": "2.5-3.0",
+     "weight": 8
+    },
+    {
+     "band": "3.0-3.5",
+     "weight": 5
+    }
+   ],
+   "observation_count": 18,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "beginner_friendly",
+    "share": 0.8,
+    "observation_count": 8
+   },
+   {
+    "tag": "casual",
+    "share": 0.6,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "660237c6-886f-5644-955e-eda14647be56",
+  "name": "Orchard Glen HOA Courts",
+  "latitude": 37.339,
+  "longitude": -122.03,
+  "city": "Cupertino",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 2,
+  "default_pickleball_courts": 2,
+  "court_type": "pickleball_lined_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "hoa",
+   "access_notes": "HOA residents only",
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "membership",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": null,
+  "culture": []
+ },
+ {
+  "id": "38182ce2-9a9c-5e51-81a9-f188c78093e4",
+  "name": "De Anza Recreation Courts",
+  "latitude": 37.3195,
+  "longitude": -122.045,
+  "city": "Cupertino",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 6,
+  "default_pickleball_courts": 4,
+  "court_type": "multi_use",
+  "indoor_outdoor": "outdoor",
+  "has_lights": true,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "organized_open_play",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_reservation",
+   "access_notes": "Walk-on when free; $6 reservations after 5 PM",
+   "reservation_available": true,
+   "reservation_required": false,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "reservation_fee",
+   "day_pass_price": 6
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": {
+   "bands": [
+    {
+     "band": "3.0-3.5",
+     "weight": 6
+    },
+    {
+     "band": "3.5-4.0",
+     "weight": 5
+    }
+   ],
+   "observation_count": 11,
+   "newest_days_ago": 4
+  },
+  "culture": [
+   {
+    "tag": "open_play",
+    "share": 0.7,
+    "observation_count": 8
+   }
+  ]
+ },
+ {
+  "id": "d95a835a-a687-520d-afa3-0fae485ecdac",
+  "name": "Appletree Park",
+  "latitude": 37.346,
+  "longitude": -122.005,
+  "city": "Sunnyvale",
+  "state": "CA",
+  "time_zone": "America/Los_Angeles",
+  "total_physical_courts": 4,
+  "default_pickleball_courts": 4,
+  "court_type": "convertible_tennis",
+  "indoor_outdoor": "outdoor",
+  "has_lights": false,
+  "has_restrooms": true,
+  "has_water": true,
+  "has_parking": true,
+  "play_system": "stay_until_finished",
+  "typical_game_minutes": null,
+  "source": "demo",
+  "existence_status": "verified",
+  "existence_confidence": 0.9,
+  "access": {
+   "access_type": "public_walk_on",
+   "access_notes": null,
+   "reservation_available": null,
+   "reservation_required": null,
+   "verification_status": "verified",
+   "confidence": 0.8
+  },
+  "cost": {
+   "cost_type": "free",
+   "day_pass_price": null
+  },
+  "hours": [
+   {
+    "day_of_week": 0,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 1,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 2,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 3,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 4,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 5,
+    "opens": "07:00",
+    "closes": "22:00"
+   },
+   {
+    "day_of_week": 6,
+    "opens": "07:00",
+    "closes": "22:00"
+   }
+  ],
+  "skill": null,
+  "culture": []
+ }
+]
