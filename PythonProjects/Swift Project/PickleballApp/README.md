@@ -10,6 +10,7 @@ confidence.
 
 - **Run it now:** open `PickleballApp.xcodeproj` and Run. Demo mode needs no backend. See [docs/SETUP.md](docs/SETUP.md).
 - **Architecture, schema, data flows, prediction/confidence/trust/privacy models:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- **Every design decision, formula and threshold, with rationale:** [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md).
 
 ## Repository layout
 
