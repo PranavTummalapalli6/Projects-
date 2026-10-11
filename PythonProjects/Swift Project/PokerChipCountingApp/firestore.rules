@@ -1,0 +1,13 @@
+rules_version = '2';
+
+// The app never reads or writes Firestore directly: every request goes through
+// ChipVisionService, which uses the Admin SDK (the Admin SDK bypasses these
+// rules). So the rules deny every client request — "who can read what" is
+// decided in the backend's tested code, not here.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
