@@ -12,6 +12,8 @@ iPhone app ──Firebase Auth (guest / email / Apple)──▶ Firebase Auth
 
 `firestore.rules` and `storage.rules` deny every direct client request, so "who can read what" is decided in the backend's tested code.
 
+This file is the map. For the reasoning and the arithmetic behind the chip solver, the two photo counters (colour, camera angle, stack height), the bank check and settle-up, sync, and healthy play, with worked examples and a decision log, see [`HOW_IT_WORKS.md`](HOW_IT_WORKS.md).
+
 The app is **local-first**: a night lives on the phone, in files, and is mirrored to the backend when there is a connection. Nothing in the app has to wait for the network except counting chips from a photo, and that has a by-hand alternative.
 
 ## The app

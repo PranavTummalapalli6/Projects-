@@ -23,12 +23,16 @@ How it works, in the order it runs:
      tabs) and black chips (dark body, white tabs) are then looked for in that row.
      A chip is always named for the colour of its body, never for its tabs: a white
      chip with blue tabs is White, whatever colours the night is using.
-  3. Counting. A pile's silhouette area, measured in units of one chip's side
-     wall, says how many chips make it up: each chip added to a tidy stack adds one
-     wall's worth of area. The constants are physical (a 3.3 mm chip in a 39 mm
-     diameter) and were checked on photos of one chip set, not fitted to it. Black
-     piles have no usable silhouette against a dark table, so they are counted from
-     the rings of tabs alone.
+  3. Counting. A pile's silhouette is measured through its middle, in units of one
+     chip's side wall. A stack of n chips seen at elevation θ is n walls plus the
+     depth of its top face tall, where a wall is 0.0846 · width · cos θ and the top
+     face is width · sin θ, so n = (height − width · sin θ) / wall. A pile four or
+     more walls tall is counted that way; a shorter one from the rings of tabs
+     showing on it (the tabs of one chip lie on a circle, squashed to sin θ of its
+     height). The constants are physical (a 3.3 mm chip in a 39 mm diameter) and
+     were checked on photos of one chip set, not fitted to it. Black piles have no
+     usable silhouette against a dark table, so they are counted from the rings of
+     tabs alone. Every count is reported with "low" confidence.
 
 What it cannot do, and says so:
   - It needs rim tabs. Chips with a plain edge are not found.
@@ -54,9 +58,6 @@ _MAX_DIMENSION = 1280
 
 # A standard clay-composite chip: 3.3 mm thick, 39 mm across.
 _THICKNESS_OVER_DIAMETER = 0.0846
-# Of the width, the share of a chip's side wall that shows up as silhouette area
-# once the curve of the base is allowed for.
-_WALL_AREA_FACTOR = 0.95
 # The pose assumed when the app sends none.
 _DEFAULT_PITCH_DEG = 22.0
 _DEFAULT_FOCAL_35MM = 24.0
@@ -70,11 +71,6 @@ _TAB_AREA_RANGE = (0.0015, 0.016)
 _TAB_RING = 0.86
 # Piles within this factor of the median width count as one size.
 _SIZE_TOLERANCE = 0.5
-
-# n = 1 + floor(excess + this). Tidy stacks add exactly one wall of area per chip;
-# loose pairs add a little more, so the boundary sits a quarter chip below the
-# next whole number.
-_COUNT_ROUNDING = 0.25
 
 
 @dataclass(frozen=True)

@@ -40,7 +40,7 @@ Character limits are Apple's: name 30, subtitle 30, promotional text 170, keywor
 > WHEN IT'S OVER
 > • Count each player's chips by hand, or photograph them — from above, or from the side — and correct anything the camera got wrong. The camera tells you how to hold the phone: flatter, lower, steadier, or where to find more light.
 > • A bank check shows whether the chips cashed out match the money that went in, and lets you decide, openly, what to do with a difference.
-> • Settle up with the fewest payments, as text or a picture you can share.
+> • Settle up in a few simple payments, as text or a picture you can share.
 >
 > AFTERWARDS
 > • History of every night, searchable, with the results.
@@ -75,7 +75,7 @@ Required: the **6.9-inch** iPhone set (1320 × 2868). App Store Connect scales i
 | `02-suggested-chips.png` | Suggested chip values | Chips that add up to the dollar |
 | `03-live-night.png` | The night in progress | A clock that keeps time and stops for breaks |
 | `04-count-from-a-photo.png` | Counting from a photo (a ring on every chip, and the tally) | Count chips with your camera |
-| `05-settle-up.png` | Settle up | Settle up with the fewest payments |
+| `05-settle-up.png` | Settle up | Settle up in a few simple payments |
 | `06-stats.png` | Stats | See how your nights add up |
 
 **Be aware before you upload them.** They are real screens of the real app, but the data is the test data the UI tests use (three players called Sam, Alex and Jo; a night that lasted seconds). Three of them are thin for that reason: `01` (the "New game" button is dimmed because a night is in progress, and the timer reads 00:04), `04` (the photo is the app's drawn sample picture of 27 discs, not a photograph) and `06` (one night of history, so the charts hold one dot). Retake those three from your own phone after a real night or two, and swap in a photo of your own chips for `04`; the other three are fine as they are. The side-view review and the camera guide are left out on purpose: the first needs a real photo to be believable, and the second is only a drawn picture in the Simulator.

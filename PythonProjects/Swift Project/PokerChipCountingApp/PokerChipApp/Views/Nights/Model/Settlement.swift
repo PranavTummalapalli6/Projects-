@@ -2,10 +2,11 @@
 //  Settlement.swift
 //  PokerChipApp
 //
-//  Turns everyone's net into the fewest, simplest payments: repeatedly match the
-//  person owed the most with the person who owes the most. With n people that is
-//  at most n − 1 payments, every cent is accounted for, and the result doesn't
-//  depend on the order the players happen to be listed in.
+//  Turns everyone's net into a few simple payments: repeatedly match the person
+//  owed the most with the person who owes the most. With n people that is at most
+//  n − 1 payments (not always the fewest possible: that is a harder problem, and
+//  this rule is the simple one), every cent is accounted for, and the result
+//  doesn't depend on the order the players happen to be listed in.
 //
 
 import Foundation

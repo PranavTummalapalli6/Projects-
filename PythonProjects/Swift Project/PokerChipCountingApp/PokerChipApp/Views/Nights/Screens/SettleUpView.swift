@@ -2,9 +2,10 @@
 //  SettleUpView.swift
 //  PokerChipApp
 //
-//  Who pays whom. Everyone's net is turned into the fewest payments that settle
-//  the table exactly — the person owed the most is matched with the person who
-//  owes the most — and can be shared as text or as an image for the group chat.
+//  Who pays whom. Everyone's net is turned into a few simple payments (at most
+//  one fewer than the number of people) that settle the table exactly — the person
+//  owed the most is matched with the person who owes the most — and can be shared
+//  as text or as an image for the group chat.
 //  The app only works the numbers out; it never moves money.
 //
 
